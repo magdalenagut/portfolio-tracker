@@ -1,0 +1,16 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+}
+
+.app {
+  max-width: 1920px;
+  margin: 0 auto;
+}
+/*# sourceMappingURL=portfolio-tracker.css.map */

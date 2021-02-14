@@ -1,0 +1,17 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,CAAC,CAAC;EACE,MAAM,EAAE,CAAC;EACT,OAAO,EAAE,CAAC;EACV,UAAU,EAAE,UAAU;CACzB;;AAED,AAAA,IAAI,CAAC;EACD,gBAAgB,EAAE,KAAK;CAC1B;;AAED,AAAA,IAAI,CAAC;EACD,SAAS,EAAE,MAAM;EACjB,MAAM,EAAC,MAAM;CAChB",
+    "sources": [
+        "../scss/portfolio-tracker.scss",
+        "../scss/custom/_calculator.scss",
+        "../scss/custom/_dashboard.scss",
+        "../scss/custom/_news.scss",
+        "../scss/custom/_newtransaction.scss",
+        "../scss/custom/_portfolio.scss",
+        "../scss/custom/_settings.scss",
+        "../scss/custom/_transactions.scss",
+        "../scss/custom/_watchlist.scss"
+    ],
+    "names": [],
+    "file": "portfolio-tracker.css"
+}

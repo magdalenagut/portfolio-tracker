@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+}
+
+.app {
+    max-width: 1920px;
+    margin:0 auto;
+}
+
+@import "./custom/calculator";
+@import "./custom/dashboard";
+@import "./custom/news";
+@import "./custom/newtransaction";
+@import "./custom/portfolio";
+@import "./custom/settings";
+@import "./custom/transactions";
+@import "./custom/watchlist";
