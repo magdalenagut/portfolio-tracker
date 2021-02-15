@@ -4,14 +4,17 @@
     box-sizing: border-box;
 }
 
-body {
+html {
     background-color: black;
+    font-family: arial, sans-serif;
 }
 
 .app {
     max-width: 1920px;
     margin:0 auto;
 }
+
+
 
 @import "./custom/calculator";
 @import "./custom/dashboard";

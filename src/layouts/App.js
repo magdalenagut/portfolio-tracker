@@ -1,39 +1,43 @@
-import React, { Component } from "react";
+import React from "react";
 import "../assets/scss/portfolio-tracker.scss";
-import {BrowserRouter as Router, Switch, Route, NavLink} from 'react-router-dom';
-import {Dashboard} from "../views/Dashboard";
-import {Portfolio} from "../views/Dashboard";
-import {Transactions} from "../views/Dashboard";
-import {NewTransaction} from "../views/Dashboard";
-import {Calculator} from "../views/Dashboard";
-import {Watchlist} from "../views/Dashboard";
-import {News} from "../views/Dashboard";
-import {Settings} from "../views/Dashboard";
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Dashboard from "../pages/Dashboard";
+import Portfolio from "../pages/Dashboard";
+import Transactions from "../pages/Dashboard";
+import NewTransaction from "../pages/Dashboard";
+import Calculator from "../pages/Dashboard";
+import Watchlist from "../pages/Dashboard";
+import News from "../pages/Dashboard";
+import Settings from "../pages/Dashboard";
 
-class App extends Component {
-   render() {
-      return (
+import Navbar from "../layouts/Navbar";
+import Sidebar from "../layouts/Sidebar";
+import Footer from "../layouts/Footer";
+
+const App = () => {
+ 
+   return (
          <Router>  
             <div className="App">
-               <nav><Navbar /></nav>
-               <sidebar><Sidebar /></sidebar>
-               <section className="view">
+               <nav className="navbar"><Navbar/></nav>
+               <aside className="sidebar"><Sidebar/></aside>
+               <main className="page">
                   <Switch>
                      <Route path="/" exact component={Dashboard}/>
-                     <Route path="/porfolio" exact component={Portfolio}/>
-                     <Route path="/transactions" exact component={Transactions}/>
-                     <Route path="/new_transaction" exact component={NewTransaction}/>
-                     <Route path="/calculator" exact component={Calculator}/>
-                     <Route path="/wachlist" exact component={Watchlist}/>
-                     <Route path="/news" exact component={News}/>
-                     <Route path="/settings" exact component={Settings}/>
-                     <Route component={ErrorPage}/>
+                     <Route path="/porfolio" component={Portfolio}/>
+                     <Route path="/transactions" component={Transactions}/>
+                     <Route path="/new_transaction" component={NewTransaction}/>
+                     <Route path="/calculator" component={Calculator}/>
+                     <Route path="/wachlist" component={Watchlist}/>
+                     <Route path="/news" component={News}/>
+                     <Route path="/settings" component={Settings}/>
+                     {/* <Route component={ErrorPage}/>  */}
                   </Switch>
-               </section>
-               <footer><Footer /></footer>
+               </main>
+               <footer><Footer/></footer>
             </div>
          </Router>
       );
-   }
 };
+
 export default App;

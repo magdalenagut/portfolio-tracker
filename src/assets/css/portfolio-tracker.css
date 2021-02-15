@@ -5,8 +5,9 @@
           box-sizing: border-box;
 }
 
-body {
+html {
   background-color: black;
+  font-family: arial, sans-serif;
 }
 
 .app {
