@@ -9,3 +9,7 @@ function Transactions() {
  
  export default Transactions;
  
+
+//  <li>
+//  <NavLink to="/new_transaction">New Transaction</NavLink>
+// </li>

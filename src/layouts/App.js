@@ -1,21 +1,13 @@
-import React from "react";
+import React, { Component } from "react";
 import "../assets/scss/portfolio-tracker.scss";
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import Dashboard from "../pages/Dashboard";
-import Portfolio from "../pages/Dashboard";
-import Transactions from "../pages/Dashboard";
-import NewTransaction from "../pages/Dashboard";
-import Calculator from "../pages/Dashboard";
-import Watchlist from "../pages/Dashboard";
-import News from "../pages/Dashboard";
-import Settings from "../pages/Dashboard";
-
+import { BrowserRouter as Router} from 'react-router-dom';
+import Page from "../layouts/Page";
 import Navbar from "../layouts/Navbar";
 import Sidebar from "../layouts/Sidebar";
 import Footer from "../layouts/Footer";
 
-const App = () => {
- 
+class App extends Component {
+ render () {
    return (
          <Router>  
             <div className="app">
@@ -23,23 +15,14 @@ const App = () => {
                <main>
                      <aside><Sidebar/></aside>
                      <section className="page">
-                        <Switch>
-                           <Route path="/" exact component={Dashboard}/>
-                           <Route path="/porfolio" component={Portfolio}/>
-                           <Route path="/transactions" component={Transactions}/>
-                           <Route path="/new_transaction" component={NewTransaction}/>
-                           <Route path="/calculator" component={Calculator}/>
-                           <Route path="/wachlist" component={Watchlist}/>
-                           <Route path="/news" component={News}/>
-                           <Route path="/settings" component={Settings}/>
-                           {/* <Route component={ErrorPage}/>  */}
-                        </Switch>
+                     <Page />
                      </section>
                </main>
                <footer><Footer/></footer>
             </div>
          </Router>
       );
+   }
 };
 
 export default App;

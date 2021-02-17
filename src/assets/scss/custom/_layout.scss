@@ -19,22 +19,21 @@ html {
         flex-direction: column;
         min-height: 100vh;
         
+        
         nav {
             // background-color: white;
             // flex-basis: 6vh;
-           @include margin;
         }
 
             main {
                 display: flex;
-                @include margin;
                 flex-grow: 1;
                     
                 aside {
                     // background-color: black;
                     min-width: 150px;
                     width: 15vw;
-                    margin-right: 5px;
+                    // margin-right: 5px;
                 }
                 
                 section {
@@ -45,7 +44,6 @@ html {
             }    
 
         footer {
-            @include margin;
         }
     }
 }

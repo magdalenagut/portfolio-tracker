@@ -26,15 +26,10 @@ html .app {
   min-height: 100vh;
 }
 
-html .app nav {
-  margin: 5px;
-}
-
 html .app main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 5px;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
@@ -43,7 +38,6 @@ html .app main {
 html .app main aside {
   min-width: 150px;
   width: 15vw;
-  margin-right: 5px;
 }
 
 html .app main section {
@@ -51,10 +45,6 @@ html .app main section {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
-}
-
-html .app footer {
-  margin: 5px;
 }
 
 /* Layout elements */
