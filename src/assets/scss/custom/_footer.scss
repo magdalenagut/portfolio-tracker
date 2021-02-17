@@ -1,0 +1,6 @@
+@import "./mixins";
+
+.footer {
+    @include color;
+    width: 100%;
+}

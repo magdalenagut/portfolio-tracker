@@ -3,7 +3,7 @@ import React from "react";
 function Calculator() {
  
     return (
-          <div>elo</div>
+      <div className="content">Calculator</div>
        );
  };
  

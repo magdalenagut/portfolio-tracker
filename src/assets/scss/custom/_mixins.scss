@@ -1,0 +1,51 @@
+@mixin border {
+    border: 1px white solid;
+    border-radius: 20px;
+}
+
+@mixin margin {
+    margin: 5px;
+}
+
+// Small devices
+@mixin sm {
+    @media (min-width: #{$screen-sm-min}) {
+        @content;
+    }
+ }
+ 
+ // Medium devices
+ @mixin md {
+    @media (min-width: #{$screen-md-min}) {
+        @content;
+    }
+ }
+ 
+ // Large devices
+ @mixin lg {
+    @media (min-width: #{$screen-lg-min}) {
+        @content;
+    }
+ }
+ 
+ // Extra large devices
+ @mixin xl {
+    @media (min-width: #{$screen-xl-min}) {
+        @content;
+    }
+ }
+
+ @mixin rwd($screen) {
+    @media (min-width: $screen+'px') {
+        @content;
+    }
+ }
+
+ @mixin color {
+
+    background: rgba( 17, 16, 16, 0.80 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 20.0px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+ }

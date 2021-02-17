@@ -3,9 +3,10 @@ import React from "react";
 function Sidebar() {
  
     return (
-          <div>elo</div>
-       );
- };
+      <div className="sidebar">Sidebar
+      </div>
+      );
+};
  
- export default Sidebar;
+export default Sidebar;
  

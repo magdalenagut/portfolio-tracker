@@ -3,7 +3,7 @@ import React from "react";
 function Watchlist() {
  
     return (
-          <div>elo</div>
+      <div className="content">Watchlist</div>
        );
  };
  

@@ -1,0 +1,6 @@
+@import "./_mixins.scss/";
+
+.navbar {
+    @include color;
+    height: 100%;
+}

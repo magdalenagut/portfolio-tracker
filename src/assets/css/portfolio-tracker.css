@@ -1,3 +1,4 @@
+/* Layout */
 * {
   margin: 0;
   padding: 0;
@@ -6,12 +7,157 @@
 }
 
 html {
-  background-color: black;
+  background: linear-gradient(130deg, #bf1736 0%, #0d1440 24%, #1438a6 53%, #0e2773 72%, #1455d9 100%);
   font-family: arial, sans-serif;
+  color: #dddddd;
 }
 
-.app {
+html .app {
   max-width: 1920px;
+  width: 100%;
   margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100vh;
 }
+
+html .app nav {
+  margin: 5px;
+}
+
+html .app main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 5px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+html .app main aside {
+  min-width: 150px;
+  width: 15vw;
+  margin-right: 5px;
+}
+
+html .app main section {
+  width: 85vw;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+html .app footer {
+  margin: 5px;
+}
+
+/* Layout elements */
+.navbar {
+  background: rgba(17, 16, 16, 0.8);
+  -webkit-box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+          box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  height: 100%;
+}
+
+.sidebar {
+  background: rgba(17, 16, 16, 0.8);
+  -webkit-box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+          box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  height: 100%;
+}
+
+.footer {
+  background: rgba(17, 16, 16, 0.8);
+  -webkit-box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+          box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  width: 100%;
+}
+
+/* Pages */
+.content {
+  background: rgba(17, 16, 16, 0.8);
+  -webkit-box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+          box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  height: 100%;
+}
+
+.content {
+  background: rgba(17, 16, 16, 0.8);
+  -webkit-box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+          box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  height: 100%;
+}
+
+.content {
+  background: rgba(17, 16, 16, 0.8);
+  -webkit-box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+          box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  height: 100%;
+}
+
+.content {
+  background: rgba(17, 16, 16, 0.8);
+  -webkit-box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+          box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  height: 100%;
+}
+
+.content {
+  background: rgba(17, 16, 16, 0.8);
+  -webkit-box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+          box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  height: 100%;
+}
+
+.content {
+  background: rgba(17, 16, 16, 0.8);
+  -webkit-box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+          box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  height: 100%;
+}
+
+/* Components */
+/* Variables */
 /*# sourceMappingURL=portfolio-tracker.css.map */

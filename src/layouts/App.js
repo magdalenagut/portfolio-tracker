@@ -18,21 +18,23 @@ const App = () => {
  
    return (
          <Router>  
-            <div className="App">
-               <nav className="navbar"><Navbar/></nav>
-               <aside className="sidebar"><Sidebar/></aside>
-               <main className="page">
-                  <Switch>
-                     <Route path="/" exact component={Dashboard}/>
-                     <Route path="/porfolio" component={Portfolio}/>
-                     <Route path="/transactions" component={Transactions}/>
-                     <Route path="/new_transaction" component={NewTransaction}/>
-                     <Route path="/calculator" component={Calculator}/>
-                     <Route path="/wachlist" component={Watchlist}/>
-                     <Route path="/news" component={News}/>
-                     <Route path="/settings" component={Settings}/>
-                     {/* <Route component={ErrorPage}/>  */}
-                  </Switch>
+            <div className="app">
+               <nav><Navbar/></nav>
+               <main>
+                     <aside><Sidebar/></aside>
+                     <section className="page">
+                        <Switch>
+                           <Route path="/" exact component={Dashboard}/>
+                           <Route path="/porfolio" component={Portfolio}/>
+                           <Route path="/transactions" component={Transactions}/>
+                           <Route path="/new_transaction" component={NewTransaction}/>
+                           <Route path="/calculator" component={Calculator}/>
+                           <Route path="/wachlist" component={Watchlist}/>
+                           <Route path="/news" component={News}/>
+                           <Route path="/settings" component={Settings}/>
+                           {/* <Route component={ErrorPage}/>  */}
+                        </Switch>
+                     </section>
                </main>
                <footer><Footer/></footer>
             </div>

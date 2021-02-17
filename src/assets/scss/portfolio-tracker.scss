@@ -1,21 +1,12 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+/* Layout */
+@import "./custom/layout";
 
-html {
-    background-color: black;
-    font-family: arial, sans-serif;
-}
+/* Layout elements */
+@import "./custom/navbar";
+@import "./custom/sidebar";
+@import "./custom/footer";
 
-.app {
-    max-width: 1920px;
-    margin:0 auto;
-}
-
-
-
+/* Pages */
 @import "./custom/calculator";
 @import "./custom/dashboard";
 @import "./custom/news";
@@ -24,3 +15,10 @@ html {
 @import "./custom/settings";
 @import "./custom/transactions";
 @import "./custom/watchlist";
+
+/* Components */
+@import "./components/button";
+
+/* Variables */
+@import "./custom/variables";
+@import "./custom/mixins";

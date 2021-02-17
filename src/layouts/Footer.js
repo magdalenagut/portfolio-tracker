@@ -3,7 +3,7 @@ import React from "react";
 function Footer() {
  
     return (
-          <div>elo</div>
+      <div className="footer">Footer</div>
        );
  };
  

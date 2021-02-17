@@ -1,0 +1,6 @@
+@import "./mixins";
+
+.content {
+     @include color;
+     height: 100%;
+}
