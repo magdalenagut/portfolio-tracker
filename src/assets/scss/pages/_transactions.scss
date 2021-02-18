@@ -1,6 +1,7 @@
-@import "./mixins";
+@import "../variables/mixins";
 
 .content {
      @include color;
      height: 100%;
 }
+

@@ -1,0 +1,24 @@
+@import "../variables/mixins";
+
+.sidebar {
+    // @include border;
+    @include color;
+    height: 100%;
+    padding-top: 20px;
+
+    ul {
+        list-style-type: none;
+
+        a {
+            display: block;
+            text-decoration: none;
+            padding: 10px;
+            color: white;
+        }
+
+        a:hover {
+            background-color: red;
+        }
+    }   
+    
+}

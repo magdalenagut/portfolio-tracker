@@ -68,6 +68,22 @@ html .app main section {
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
   height: 100%;
+  padding-top: 20px;
+}
+
+.sidebar ul {
+  list-style-type: none;
+}
+
+.sidebar ul a {
+  display: block;
+  text-decoration: none;
+  padding: 10px;
+  color: white;
+}
+
+.sidebar ul a:hover {
+  background-color: red;
 }
 
 .footer {
