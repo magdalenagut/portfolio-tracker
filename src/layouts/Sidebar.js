@@ -12,7 +12,7 @@ const list = [
   {name: "Settings", path: "/settings"},
 ]
 
-function Sidebar() {
+const Sidebar = () => {
  
   const menu = list.map(item => (
     <li key={item.name}>
@@ -22,11 +22,13 @@ function Sidebar() {
 
   return (
     <>
-    <div className="sidebar">
-        <ul>
-        {menu}
-        </ul>
-    </div>
+      <div className="sidebar">
+        <nav>
+            <ul>
+              {menu}
+            </ul>
+          </nav>
+      </div>
     </>
   );
 };

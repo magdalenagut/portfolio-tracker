@@ -2,23 +2,37 @@
 
 .sidebar {
     // @include border;
-    @include color;
+    // @include color;
     height: 100%;
     padding-top: 20px;
 
-    ul {
-        list-style-type: none;
+    nav {
 
-        a {
-            display: block;
-            text-decoration: none;
-            padding: 10px;
-            color: white;
+        ul {
+            list-style-type: none;
+            li {
+                a {
+                    display: block;
+                    text-decoration: none;
+                    padding: 10px;
+                    color: white; 
+                 
+                }
+                
+                :hover {
+                    border-bottom: 2px solid blanchedalmond;
+                    transition: 0.2s;
+                    }
+
+                .active {
+                    background-color: blue;
+                }
+
+                
+            }
+
         }
 
-        a:hover {
-            background-color: red;
-        }
     }   
     
 }

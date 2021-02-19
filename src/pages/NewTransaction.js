@@ -3,9 +3,8 @@ import React from "react";
 function NewTransaction() {
  
     return (
-      <div className="new_transaction">NewsTransaction</div>
+      <div className="content">Calculator</div>
        );
  };
  
  export default NewTransaction;
- 
