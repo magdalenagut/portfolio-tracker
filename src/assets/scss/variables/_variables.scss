@@ -8,10 +8,23 @@ $grid-breakpoints: (
   xl: 1200px
 );
 
+
+// Small tablets and large smartphones (landscape view)
+$screen-sm-min: 576px;
+
+// Small tablets (portrait view)
+$screen-md-min: 768px;
+
+// Tablets and small desktops
+$screen-lg-min: 992px;
+
+// Large tablets and desktops
+$screen-xl-min: 1200px;
+
 // Color system
 
 $blue:    #5e72e4 !default;
-$indigo:  #5603ad !default;
+$glass:  #5603ad !default;
 $purple:  #8965e0 !default;
 $pink:    #f3a4b5 !default;
 $red:     #f5365c !default;
@@ -21,4 +34,9 @@ $green:   #2dce89 !default;
 $teal:    #11cdef !default;
 $cyan:    #2bffc6 !default;
 
-// Font system
+//Fonts
+$main: 10px;
+$sm: 1rem;
+$md: 1.5rem;
+$lg: 2rem;
+$xl: 2.5rem;

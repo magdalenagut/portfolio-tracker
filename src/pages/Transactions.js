@@ -3,7 +3,7 @@ import React from "react";
 function Transactions() {
  
     return (
-      <div className="content">Calculator</div>
+      <div className="content">Transactions</div>
        );
  };
  

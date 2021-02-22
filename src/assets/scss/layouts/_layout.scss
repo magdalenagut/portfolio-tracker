@@ -10,7 +10,7 @@ html {
  
     body {
         background: rgb(76,68,85);
-background: radial-gradient(circle, rgba(76,68,85,1) 0%, rgba(68,32,37,1) 51%, rgba(45,31,64,1) 62%, rgba(47,47,48,1) 100%);
+        background: radial-gradient(circle, rgba(76,68,85,1) 0%, rgba(68,32,37,1) 51%, rgba(45,31,64,1) 62%, rgba(47,47,48,1) 100%);
         font-family: arial, sans-serif;
         color: rgb(221, 221, 221);
 
@@ -20,7 +20,7 @@ background: radial-gradient(circle, rgba(76,68,85,1) 0%, rgba(68,32,37,1) 51%, r
             margin: 0 auto;
             display: flex;
             flex-direction: column;
-            min-height: 100vh;        
+            min-height: 100vh; 
             
             nav {
                 @include margin;
@@ -31,15 +31,12 @@ background: radial-gradient(circle, rgba(76,68,85,1) 0%, rgba(68,32,37,1) 51%, r
                     flex-grow: 1;
                         
                     aside {
-                        // background-color: black;
                         min-width: 150px;
                         width: 15vw;
-                        margin: 0 5px;
-                        @include color;
+                        margin: 0 5px;                     
                     }
                     
                     section {
-                        width: 85vw;
                         flex-grow: 1;
                         margin-right: 5px;
                     }
@@ -52,8 +49,6 @@ background: radial-gradient(circle, rgba(76,68,85,1) 0%, rgba(68,32,37,1) 51%, r
 
     }
 }
-
-
 
 
 // .container {

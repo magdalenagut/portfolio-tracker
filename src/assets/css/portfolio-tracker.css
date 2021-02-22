@@ -44,17 +44,9 @@ html body .app main aside {
   min-width: 150px;
   width: 15vw;
   margin: 0 5px;
-  background: rgba(17, 16, 16, 0.8);
-  -webkit-box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-          box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  -webkit-backdrop-filter: blur(20px);
-          backdrop-filter: blur(20px);
-  border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 html body .app main section {
-  width: 85vw;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
@@ -71,32 +63,64 @@ html body .app footer {
 }
 
 .sidebar {
+  background: rgba(17, 16, 16, 0.8);
+  -webkit-box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+          box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
   height: 100%;
   padding-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
-.sidebar nav ul {
+.sidebar ul {
   list-style-type: none;
 }
 
-.sidebar nav ul li a {
+.sidebar ul li a {
   display: block;
   text-decoration: none;
   padding: 10px;
   color: white;
+  border: 2px solid transparent;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
-.sidebar nav ul li :hover {
-  border-bottom: 2px solid blanchedalmond;
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
+.sidebar ul li a svg {
+  margin-right: 5px;
 }
 
-.sidebar nav ul li .active {
+.sidebar ul li a :hover {
+  border: none;
+}
+
+.sidebar ul li :hover {
+  border-bottom: 2px solid  white;
+}
+
+.sidebar ul li .active {
   background-color: blue;
 }
 
 .footer {
+  background: rgba(17, 16, 16, 0.8);
+  -webkit-box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+          box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
   width: 100%;
 }
 
@@ -173,5 +197,9 @@ html body .app footer {
 }
 
 /* Components */
+.swap {
+  cursor: pointer;
+}
+
 /* Variables */
 /*# sourceMappingURL=portfolio-tracker.css.map */
