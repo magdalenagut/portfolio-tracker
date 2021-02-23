@@ -1,14 +1,30 @@
 @import "../variables/mixins";
 
+
+.home {
+    @include color2;
+    height: 5vh;
+    position: fixed;
+    z-index: 1;
+    width: 15vw;
+    min-width: 250px;
+}
+
 .sidebar {
     // @include border;
-    @include color;
-    height: 100%;
+    @include color2;
     padding-top: 20px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
+    // display: flex;
+    // justify-content: flex-start;
+    // align-items: flex-start;
+    position: fixed;
+    z-index: 1;
+    height: calc(100vh - 6vh);
+    min-width: 250px;
+    width: 15vw;
+    top: 5vh;
     
+    // @include margin;  
 
     ul {
         list-style-type: none;  
