@@ -13,6 +13,8 @@ const list = [
   {name: "Settings", path: "/settings", icon:<MdDashboard/>},
 ]
 
+
+
 const Sidebar = () => {
  
   const menu = list.map(item => (
@@ -21,12 +23,6 @@ const Sidebar = () => {
       <NavLink to={item.path} exact={item.exact ? item.exact : false}>{item.icon}{item.name}</NavLink>
     </li>
   ))
-
-  // const icon = list.map(item => (
-  //   <div key={item.name}>
-  //     {item.icon}
-  //   </div>
-  // ))
 
   return (
     <>
