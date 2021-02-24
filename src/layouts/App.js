@@ -11,7 +11,8 @@ class App extends Component {
    return (
          <Router>  
             <div className="app">
-               <aside><Sidebar/></aside>
+               <aside></aside>
+               <Sidebar/>
                <main> 
                      <nav><Navbar/></nav>
                      <section className="page">

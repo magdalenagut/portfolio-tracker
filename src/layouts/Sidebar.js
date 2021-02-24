@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import {NavLink, Link} from "react-router-dom";
 import "../assets/scss/layouts/_sidebar.scss"
 import {RiDashboardFill} from "react-icons/ri";
@@ -8,6 +8,7 @@ import {IoIosSwap} from "react-icons/io";
 import {IoMdCalculator} from "react-icons/io";
 import {IoMdSettings} from "react-icons/io";
 import {IoMdPaperPlane} from "react-icons/io";
+import {IoMdMenu} from "react-icons/io";
 
 
 const list = [
@@ -21,6 +22,9 @@ const list = [
 ]
 
 const Sidebar = () => {
+  
+  const [sidebar, setSidebar] = useState(false);
+  const showSidebar = () => setSidebar(!sidebar);
  
   const menu = list.map(item => (
 
@@ -31,10 +35,13 @@ const Sidebar = () => {
 
   return (
     <>
+    <div className="hamburger">
+    <IoMdMenu onClick={showSidebar}/>
+    </div>
     <div className="home">
         <Link to="/">Portfolio Tracker</Link>
     </div>
-    <div className="sidebar">
+    <div className={sidebar ? "sidebar active" : "sidebar"}>
         <ul>
           {menu}
         </ul>
