@@ -35,17 +35,22 @@ const Sidebar = () => {
 
   return (
     <>
-    <div className="hamburger">
-    <IoMdMenu onClick={showSidebar}/>
-    </div>
-    <div className="home">
-        <Link to="/">Portfolio Tracker</Link>
-    </div>
-    <div className={sidebar ? "sidebar active" : "sidebar"}>
-        <ul>
-          {menu}
-        </ul>
-    </div>
+
+        <div className="hamburger">
+        <IoMdMenu onClick={showSidebar}/>
+        </div>
+
+        <div className={sidebar ? "sidebar toggle" : "sidebar"}>
+        <div className="home">
+            <Link to="/">Portfolio Tracker</Link>
+        </div>
+
+        <div className="list">
+            <ul>
+              {menu}
+            </ul>
+        </div>
+        </div>
     </>
   );
 

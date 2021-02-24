@@ -5,74 +5,103 @@
     position: fixed;
     z-index: 2;
     color: white;
-    font-size: 40px;
     background-color: brown;
     cursor: pointer;
-}
-
-.home {
-    @include color2;
     height: 5vh;
-    position: fixed;
-    z-index: 1;
-    width: 15vw;
-    min-width: 250px;
+
+    @media (min-width: 769px) {
+        display: none;
+
+    }
 }
 
-.sidebar {
-    // @include border;
-    @include color2;
-    padding-top: 20px;
-    // display: flex;
-    // justify-content: flex-start;
-    // align-items: flex-start;
-    position: fixed;
-    z-index: 1;
-    height: calc(100vh - 6vh);
-    min-width: 250px;
-    width: 15vw;
-    top: 5vh;
+
+.sidebar{
     
-    // @include margin;  
-
-    @media (max-width: 768px) {
-        transform: translateX(-300px);
-        transition: 2s;
-    }
-
-    ul {
-        list-style-type: none;  
-        
-        li {
-
-            a {
-                display: block;
-                text-decoration: none;
-                padding: 10px;
-                color: white;
-                border: 2px solid transparent;
-                transition: 0.5s;
-
-                svg {
-                    margin-right: 5px;
-                }
-
-                :hover{
-                    border: none;
-                }
-            }
+            // display: block;
+            background: yellow;
+            // @include border;
+            // 
+            // display: flex;
+            // justify-content: flex-start;
+            // align-items: flex-start;
+            position: fixed;
+            z-index: 1;
+            top: 5vh;
+            min-width: 250px;
+            width: 15vw;
             
-            :hover {
-                border-bottom: 2px solid  white;
+            // @include margin;  
+
+            
+
+        .home {
+            // @include color2;
+            background: green;
+            height: 5vh;
+            top: 0;
+            position: fixed;
+            z-index: 1;
+            width: 15vw;
+            min-width: 250px;
+
+            @media (max-width: 768px) {
+                display: none;
+
+            }
+        }
+
+        .list {
+            height: calc(100vh - 6vh);
+            @include color2;
+        
+            ul {
+                list-style-type: none;  
+                
+                li {
+
+                    a {
+                        display: block;
+                        text-decoration: none;
+                        padding: 10px;
+                        color: white;
+                        border: 2px solid transparent;
+                        transition: 0.5s;
+
+                        svg {
+                            margin-right: 5px;
+                        }
+
+                        :hover{
+                            border: none;
+                        }
+                    }
+                    
+                    :hover {
+                        border-bottom: 2px solid  white;
+
+                    }
+
+                    .active {
+                        background-color: blue;
+                    }
+
+                }
 
             }
 
-            .active {
-                background-color: blue;
-            }
+           
 
         }
 
-    }
+        @media (max-width: 768px) {
+                transform: translateX(-250px);
+                transition: 0.5s;
 
+            }
 }
+
+.sidebar.toggle {
+            transform: translateX(0px);
+            transition: 0.5s;
+     }
