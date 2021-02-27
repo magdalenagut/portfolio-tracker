@@ -24,7 +24,9 @@ const list = [
 const Sidebar = () => {
   
   const [sidebar, setSidebar] = useState(false);
+  const [hamburger, setHamburger] = useState(false);
   const showSidebar = () => setSidebar(!sidebar);
+  const showHamburger = () => setHamburger(!hamburger);
  
   const menu = list.map(item => (
 
@@ -36,16 +38,18 @@ const Sidebar = () => {
   return (
     <>
 
-        <div className="hamburger">
-        <IoMdMenu onClick={showSidebar}/>
+        <div className={hamburger ? "hamburger toggle" : "hamburger"}>
+        <IoMdMenu onClick={() => {
+          showSidebar();
+          showHamburger();
+        }}/>
         </div>
 
         <div className={sidebar ? "sidebar toggle" : "sidebar"}>
+        <div className="list">
         <div className="home">
             <Link to="/">Portfolio Tracker</Link>
         </div>
-
-        <div className="list">
             <ul>
               {menu}
             </ul>

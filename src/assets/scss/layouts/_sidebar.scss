@@ -3,12 +3,16 @@
 
 .hamburger {
     position: fixed;
-    z-index: 2;
+    z-index: 1;
     color: white;
-    background-color: brown;
+    background-color: transparent;
     cursor: pointer;
     height: 5vh;
-
+    top: 0;
+    left: 0;
+    font-size: 50px;
+    transform: translateX(0px);
+    transition: transform .3s .1s ease-in-out;
     @media (min-width: 769px) {
         display: none;
 
@@ -18,56 +22,44 @@
 
 .sidebar{
     height: 100%;
-    
-            // display: block;
-            background: yellow;
-            // @include border;
-            // 
-            // display: flex;
-            // justify-content: flex-start;
-            // align-items: flex-start;
-            position: fixed;
-            z-index: 1;
-            top: 5vh;
-            min-width: 250px;
-            width: 15vw;
+    position: fixed;
+    z-index: 1;
+    // top: 5vh;
+    min-width: 250px;
+    width: 15vw;
+    top: 0;
+    left: 0;
+
+        @media (max-width: 768px) {
+            transform: translateX(-150px);
+            transition: transform .3s .1s ease-in-out;
+            min-width: 150px;
+            max-width: 200px;
             
-            // @include margin;  
-
-            
-
-        .home {
-            // @include color2;
-            background: green;
-            height: 5vh;
-            top: 0;
-            position: fixed;
-            z-index: 1;
-            width: 15vw;
-            min-width: 250px;
-
-            @media (max-width: 768px) {
-                display: none;
-
-            }
         }
 
         .list {
-            height: calc(100vh - 6vh);
-            @include color2;
-        
+             background-color: #252731;
+            height: 100%;
+
+
+
             ul {
                 list-style-type: none;  
-                
-                li {
+                 padding-top: 15px;
 
+
+
+                li {
+                    margin: 10px;
                     a {
                         display: block;
                         text-decoration: none;
                         padding: 10px;
-                        color: white;
+                        color: rgb(124, 137, 153);
                         border: 2px solid transparent;
-                        transition: 0.5s;
+                        transition: 0.3s;
+                        border: none;
 
                         svg {
                             margin-right: 5px;
@@ -79,30 +71,52 @@
                     }
                     
                     :hover {
-                        border-bottom: 2px solid  white;
+                        // border-bottom: 2px solid  white;
+                        color: white;
 
                     }
 
                     .active {
-                        background-color: blue;
+       
+                        @include color;
                     }
 
                 }
 
             }
 
-           
+            .home {
+                // @include color2;
+                text-align: center;
+                height: 5vh;
+                z-index: 1;
+                width: 15vw;
+                min-width: 250px;
+                min-height: 50px;;
+                font-size: 20px;
+                padding-top: 10px;
+                
+                @media (max-width: 768px) {
+                    display: none;
+                }
+
+                a {
+                    text-decoration: none;
+                    color: white;
+                }
 
         }
 
-        @media (max-width: 768px) {
-                transform: translateX(-250px);
-                transition: 0.5s;
-
-            }
+    }
 }
 
 .sidebar.toggle {
             transform: translateX(0px);
-            transition: 0.5s;
+            transition: transform .3s .1s ease-in-out;
      }
+
+.hamburger.toggle {
+    transform: translateX(150px);
+    transition: transform .3s .1s ease-in-out;
+
+ }
