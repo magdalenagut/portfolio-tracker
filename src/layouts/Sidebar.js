@@ -44,7 +44,6 @@ const Sidebar = () => {
           showHamburger();
         }}/>
         </div>
-
         <div className={sidebar ? "sidebar toggle" : "sidebar"}>
         <div className="list">
         <div className="home">
@@ -55,6 +54,7 @@ const Sidebar = () => {
             </ul>
         </div>
         </div>
+        
     </>
   );
 
