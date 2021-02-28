@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 
+
 class Calc extends Component {
   state = {
     currencies: ["USD", "AUD", "SGD", "PHP", "EUR"],
@@ -62,6 +63,10 @@ class Calc extends Component {
       this.calculate
     );
   };
+
+
+
+
   render() {
     const { currencies, base, amount, convertTo, result, date } = this.state;
     return (

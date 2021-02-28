@@ -13,102 +13,104 @@
     font-size: 50px;
     transform: translateX(0px);
     transition: transform .3s .1s ease-in-out;
-    
+
     @media (min-width: 769px) {
         display: none;
 
     }
 }
 
-.sidebar{
+.sidebar {
     height: 100%;
     position: fixed;
     // z-index: 1;
     min-width: 250px;
-    width: 15vw;
+    width: 15%;
     top: 0;
     left: 0;
     @include color;
 
-        @media (max-width: 768px) {
-            transform: translateX(-150px);
-            transition: transform .3s .1s ease-in-out;
-            min-width: 150px;
-            max-width: 200px;
-            position: fixed;
-            z-index: 1;
-        }
+    @media (max-width: 768px) {
+        transform: translateX(-150px);
+        transition: transform .3s .1s ease-in-out;
+        min-width: 150px;
+        max-width: 200px;
+        position: fixed;
+        z-index: 1;
+    }
 
-        .list {
+    .list {
         //   background-color: #252731;
-          background-color: transparent;
-            height: 100%;
+        background-color: transparent;
+        height: 100%;
 
 
 
-            ul {
-                list-style-type: none;  
-                 padding-top: 15px;
+        ul {
+            list-style-type: none;
+            padding-top: 15px;
 
 
 
-                li {
-                    margin: 10px;
-                    border: none;
-                    a {
-                        display: block;
-                        text-decoration: none;
-                        padding: 10px;
-                        color: rgb(124, 137, 153);
-                        border: 2px solid transparent;
-                        transition: 0.3s;
-                        
+            li {
+                margin: 10px;
+                border: none;
 
-                        svg {
-                            margin-right: 5px;
-                        }
+                a {
+                    display: block;
+                    text-decoration: none;
+                    padding: 10px;
+                    color: rgb(124, 137, 153);
+                    border: 2px solid transparent;
+                    transition: 0.3s;
 
-                        :hover{
-                            border: none;
-                        }
+
+                    svg {
+                        margin-right: 5px;
                     }
-                    
+
                     :hover {
-                        // border-bottom: 2px solid  white;
-                        color: white;
-
+                        border: none;
                     }
+                }
 
-                    .active {
-       
-                        @include color;
-                        color: white;
-                    }
+                :hover {
+                    // border-bottom: 2px solid  white;
+                    color: white;
 
+                }
+
+                .active {
+
+                    @include color;
+                    color: white;
                 }
 
             }
 
-            .home {
-                // @include color2;
-                text-align: center;
-                height: 5vh;
-                z-index: 1;
-                width: 15vw;
-                min-width: 250px;
-                min-height: 50px;;
-                font-size: 20px;
-                padding-top: 10px;
-                background-color: transparent;
-                
-                @media (max-width: 768px) {
-                    display: none;
-                }
+        }
 
-                a {
-                    text-decoration: none;
-                    color: white;
-                }
+        .home {
+            // @include color2;
+            text-align: center;
+            height: 5vh;
+            z-index: 1;
+            width: 15%;
+            min-width: 250px;
+            min-height: 50px;
+            ;
+            font-size: 20px;
+            padding-top: 10px;
+            background-color: transparent;
+
+            @media (max-width: 768px) {
+                display: none;
+            }
+
+            a {
+                text-decoration: none;
+                color: white;
+            }
 
         }
 
@@ -117,12 +119,12 @@
 
 
 .sidebar.toggle {
-            transform: translateX(0px);
-            transition: transform .3s .1s ease-in-out;
-     }
+    transform: translateX(0px);
+    transition: transform .3s .1s ease-in-out;
+}
 
 .hamburger.toggle {
     transform: translateX(150px);
     transition: transform .3s .1s ease-in-out;
 
- }
+}

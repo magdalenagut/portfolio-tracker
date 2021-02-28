@@ -1,35 +1,15 @@
 import React from "react";
-import "../assets/scss/portfolio-tracker.scss"
+import "../assets/scss/portfolio-tracker.scss";
+import Card from "../components/Card";
+
 
 function Dashboard() {
  
     return (
           <div className="content">
-                <div className="box"></div>
-                <div className="box"></div>
-                <div className="box"></div>
-                <div className="box"></div>
-                <div className="box"></div>
-                <div className="box"></div>
-                <div className="box"></div>
-                <div className="box"></div>
-                <div className="box"></div>
-                <div className="box"></div>
-                <div className="box"></div>
-                <div className="box"></div>
-                <div className="box"></div><div className="box"></div>
-                <div className="box"></div>
-                <div className="box"></div>
-                <div className="box"></div>
-                <div className="box"></div>
-                <div className="box"></div>
-                <div className="box"></div>
-                <div className="box"></div>
-                <div className="box"></div>
-                <div className="box"></div>
-                <div className="box"></div>
-                <div className="box"></div>
-                <div className="box"></div>
+                <div className="cards"><Card /></div>
+                <div className="chart"></div>
+                <div className="assets"></div>
           </div>
        );
  };
