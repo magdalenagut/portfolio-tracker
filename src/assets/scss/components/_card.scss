@@ -1,40 +1,11 @@
 @import "../variables/mixins";
 
 div.card {
-max-width: 200px;
- min-height: 40px;
-   margin: 1%;
-   @include color;
-
-  
-   @include xs {
-    width: 100%;
-    max-width: 130px;
-   }
-
-   @include sm {
-    width: 5%;
-    min-width: 100px;
-    max-width: 130px;
-   }
-
-   @include md  {
-        width: 15%;
-    }
- @include lg  {
-            width: 15%;
-        }
-
-   @include xl {
-                width: 30%;
-            }
-  
- 
-           
-
-
-
+    flex: 6;
+    margin: 5px;
+    @include color;
     
-         
-
+    @media (max-width: 768px) {
+        flex: 40%;
+    }
 }

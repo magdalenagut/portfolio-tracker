@@ -1,27 +1,12 @@
 @import "../variables/mixins";
 
 div.content {
-     width: 100%;
-     display: flex;
-     flex-direction: column;
-     
-     .cards {
-          display: flex;
-          flex-direction: row;
-          flex-wrap: wrap;
-          justify-content: space-between;
 
-     }
-     
-     .chart {
+          .cards {
+               display: flex;
+               flex-direction: row;
+               flex-wrap: wrap;
+               justify-content: space-between;
 
-
-     }
-
-     .assets {
-
-
-     }
-
-}
-
+          }
+ }

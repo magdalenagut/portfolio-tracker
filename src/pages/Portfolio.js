@@ -1,10 +1,15 @@
 import React from "react";
-import "../assets/scss/portfolio-tracker.scss"
+import "../assets/scss/portfolio-tracker.scss";
+import Wallet from "../components/Wallet";
 
 function Portfolio() {
  
     return (
-      <div className="content"></div>
+      <div className="content">
+        
+        
+        <Wallet/>
+      </div>
        );
  };
  
