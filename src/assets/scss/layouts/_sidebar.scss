@@ -3,7 +3,7 @@
 
 .hamburger {
     position: fixed;
-    z-index: 1;
+    z-index: 2;
     color: white;
     background-color: transparent;
     cursor: pointer;
@@ -14,118 +14,135 @@
     transform: translateX(0px);
     transition: transform .3s .1s ease-in-out;
 
-    @media (min-width: 769px) {
+    @media (min-width: 992px) {
         display: none;
 
     }
 }
 
-.sidebar {
-    
+
+.transparent {
+
     height: 100%;
     position: fixed;
-    // z-index: 1;
-    min-width: 250px;
-    width: 15%;
+    z-index: 1;
+    width: 300px;
     top: 0;
     left: 0;
-    @include color;
 
-    @media (max-width: 768px) {
-        transform: translateX(-150px);
-        transition: transform .3s .1s ease-in-out;
-        min-width: 150px;
-        max-width: 200px;
-        position: fixed;
-        z-index: 1;
+    padding-top: 5vh;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 5vh;
+
+    @media (max-width: 992px) {
+        padding: 0;
     }
 
-    .list {
-        //   background-color: #252731;
-        background-color: transparent;
+    .sidebar {
+
+        // style of color
+        background: rgba(255, 255, 255, 0.00);
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+        backdrop-filter: blur(20.0px);
+        border-radius: 10px;
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        z-index: 1;
+        //rest
         height: 100%;
 
+        @media (max-width: 992px) {
+            transform: translateX(-200px);
+            transition: transform .3s .1s ease-in-out;
+            width: 200px;
+            position: fixed;
+
+            // style of color
+            @include background;
+        }
+
+        .list {
+            height: 100%;
+
+            ul {
+                list-style-type: none;
+                padding-top: 15px;
+
+                li {
+                    margin: 10px;
+                    border: none;
+
+                    a {
+                        display: block;
+                        text-decoration: none;
+                        padding: 10px;
+                        color: rgb(124, 137, 153);
+                        border: 2px solid transparent;
+                        transition: 0.3s;
 
 
-        ul {
-            list-style-type: none;
-            padding-top: 15px;
+                        svg {
+                            margin-right: 5px;
+                        }
 
-
-
-            li {
-                margin: 10px;
-                border: none;
-
-                a {
-                    display: block;
-                    text-decoration: none;
-                    padding: 10px;
-                    color: rgb(124, 137, 153);
-                    border: 2px solid transparent;
-                    transition: 0.3s;
-
-
-                    svg {
-                        margin-right: 5px;
+                        :hover {
+                            border: none;
+                        }
                     }
 
                     :hover {
-                        border: none;
+                        color: white;
+
                     }
+
+                    .active {
+                        @include color;
+                        color: white;
+                    }
+
                 }
 
-                :hover {
-                    // border-bottom: 2px solid  white;
-                    color: white;
+            }
 
+            .home {
+                // @include color2;
+                text-align: center;
+                height: 5vh;
+                z-index: 1;
+                width: 15%;
+                min-width: 250px;
+                min-height: 50px;
+                ;
+                font-size: 20px;
+                padding-top: 10px;
+                background-color: transparent;
+
+                @media (max-width: 992px) {
+                    display: none;
                 }
 
-                .active {
-
-                    @include color;
+                a {
+                    text-decoration: none;
                     color: white;
                 }
 
             }
 
         }
-
-        .home {
-            // @include color2;
-            text-align: center;
-            height: 5vh;
-            z-index: 1;
-            width: 15%;
-            min-width: 250px;
-            min-height: 50px;
-            ;
-            font-size: 20px;
-            padding-top: 10px;
-            background-color: transparent;
-
-            @media (max-width: 768px) {
-                display: none;
-            }
-
-            a {
-                text-decoration: none;
-                color: white;
-            }
-
-        }
-
     }
-}
 
+}
 
 .sidebar.toggle {
     transform: translateX(0px);
     transition: transform .3s .1s ease-in-out;
+
+
+
 }
 
 .hamburger.toggle {
-    transform: translateX(150px);
+    transform: translateX(200px);
     transition: transform .3s .1s ease-in-out;
 
 }

@@ -1,26 +1,17 @@
 @import "../variables/mixins";
 
 
-.wallets_table {
-display: flex;
-flex-direction: column;
-    
      
     .wallets_row {
         display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        
+       
         .wallet {
             margin: 1px;
             background-color: #252731;
             margin: 5px;
              @include color;
-             flex: auto;
+             flex: 50%;
 
         }
 
     }
-
-}
- 

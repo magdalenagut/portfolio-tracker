@@ -6,8 +6,6 @@ function Portfolio() {
  
     return (
       <div className="content">
-        
-        
         <Wallet/>
       </div>
        );
