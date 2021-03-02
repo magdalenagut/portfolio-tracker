@@ -1,9 +1,0 @@
-
-@import "../variables/mixins";
-
-.chart {
-    flex: auto;
-    margin: 5px;
-    min-height: 40px;
-    @include color;
-}

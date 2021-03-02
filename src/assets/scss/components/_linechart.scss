@@ -1,0 +1,9 @@
+
+ @import "../variables/mixins";
+
+div.linechart {
+    @include color;
+    flex: 100%;
+    overflow: hidden;
+    color: black;
+}

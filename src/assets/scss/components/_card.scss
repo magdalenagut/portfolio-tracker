@@ -2,7 +2,6 @@
 
 div.card {
     flex: 6;
-    margin: 5px;
     @include color;
     
     @media (max-width: 768px) {

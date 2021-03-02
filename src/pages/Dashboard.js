@@ -1,7 +1,7 @@
 import React from "react";
 import "../assets/scss/portfolio-tracker.scss";
 import Card from "../components/Card";
-import Chart from "../components/Chart";
+import Linechart from "../components/Linechart";
 import Assets from "../components/Assets";
 
 function Dashboard() {
@@ -11,7 +11,8 @@ function Dashboard() {
           <div className="cards">
             <Card />
           </div>
-          <Chart />
+
+          <Linechart />                  
           <Assets />
 
     </div>
