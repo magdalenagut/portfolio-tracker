@@ -1,10 +1,6 @@
 @import "../variables/mixins";
 
 div.card {
-    flex: 6;
     @include color;
-    
-    @media (max-width: 768px) {
-        flex: 40%;
-    }
+
 }

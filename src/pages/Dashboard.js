@@ -14,7 +14,6 @@ function Dashboard() {
 
           <Linechart />                  
           <Assets />
-
     </div>
   );
 }

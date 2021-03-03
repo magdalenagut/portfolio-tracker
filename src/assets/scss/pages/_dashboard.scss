@@ -3,11 +3,14 @@
 div.content {
 
           .cards {
-               display: flex;
-               flex-direction: row;
-               flex-wrap: wrap;
-               justify-content: space-between;
-
+               display: grid;
+               grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+               
+               
+               @media (max-width: 992px) {
+                    grid-template-columns: 1fr 1fr 1fr;
+                    
+                }  
           }
 
 

@@ -8,7 +8,6 @@ import { IoIosSwap } from "react-icons/io";
 import { IoMdCalculator } from "react-icons/io";
 import { IoMdSettings } from "react-icons/io";
 import { IoMdPaperPlane } from "react-icons/io";
-import { IoMdMenu } from "react-icons/io";
 
 const list = [
   { name: "Dashboard", path: "/", exact: "true", icon: <RiDashboardFill /> },
@@ -29,32 +28,39 @@ const Sidebar = () => {
   const menu = list.map((item) => (
     <li key={item.name}>
       <NavLink to={item.path} exact={item.exact ? item.exact : false}>
-        {item.icon}
-        {item.name}
+        <p>
+          {" "}
+          {item.icon}
+          {item.name}
+        </p>
       </NavLink>
     </li>
   ));
 
   return (
     <>
-      <div className={hamburger ? "hamburger toggle" : "hamburger"}>
-        <IoMdMenu
-          onClick={() => {
-            showSidebar();
-            showHamburger();
-          }}
-        />
+      <div
+        className={hamburger ? "hamburger toggle" : "hamburger"}
+        onClick={() => {
+          showSidebar();
+          showHamburger();
+        }}
+      >
+        <span className="hamburger__box">
+          <span className="hamburger__inner"></span>
+        </span>
       </div>
+
       <div className="transparent">
-      <div className={sidebar ? "sidebar toggle" : "sidebar"}>
-        <div className="list">
-          <div className="home">
-            <Link to="/">Portfolio Tracker</Link>
+        <div className={sidebar ? "sidebar toggle" : "sidebar"}>
+          <div className="list">
+            <div className="home">
+              <Link to="/">Portfolio Tracker</Link>
+            </div>
+            <ul>{menu}</ul>
           </div>
-          <ul>{menu}</ul>
         </div>
       </div>
-</div>
     </>
   );
 };

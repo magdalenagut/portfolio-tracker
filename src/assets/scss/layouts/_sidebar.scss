@@ -1,32 +1,101 @@
 @import "../variables/mixins";
 
 
+// button.hamburger {
+//     position: fixed;
+//     z-index: 14;
+//     color: white;
+//     background-color: blue;
+//     cursor: pointer;
+//     top: 0;
+//     left: 0;
+//     transition: transform .3s .1s ease-in-out;
+//     height: 5vh;
+//     width: 50px;
+//     @media (min-width: 992px) {
+//         display: none;
+
+//     }
+// }
+
 .hamburger {
+    padding: 10px;
+    display: inline-block;
     position: fixed;
-    z-index: 14;
-    color: white;
-    background-color: transparent;
     cursor: pointer;
-    height: 5vh;
+    border: 0px;
+    margin: 0;
     top: 0;
     left: 0;
-    font-size: 50px;
+    z-index: 20;
     transition: transform .3s .1s ease-in-out;
 
     @media (min-width: 992px) {
         display: none;
 
     }
+
+    .hamburger__box {
+        width: 35px;
+        height: 24px;
+        display: inline-block;
+        position: relative;
+
+        .hamburger__inner {
+            @include hamburger-line;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            transition: background-color .1s .2s ease-in-out;
+
+            &:before,
+            &:after {
+                @include hamburger-line;
+                content: '';
+                left: 0;
+                transition: transform .2s .2s ease-in-out;
+            }
+
+            &:before {
+                top: -10px;
+            }
+
+            &:after {
+                top: 10px;
+            }
+
+        }
+
+    }
+
+
+    &.toggle {
+        transform: translatex(250px);
+
+        .hamburger__inner {
+            background-color: transparent;
+
+            &:before {
+                transform: translateY(10px) rotate(45deg);
+            }
+
+            &:after {
+                transform: translateY(-10px) rotate(-45deg);
+            }
+        }
+
+    }
 }
+
+
 
 
 .transparent {
 
-
     height: 100%;
     position: fixed;
     z-index: 13;
-    width: 300px;
+    width: 250px;
     top: 0;
     left: 0;
 
@@ -42,61 +111,67 @@
 
     .sidebar {
 
-        // style of color
-
-        @include background;
-        background: rgba(255, 255, 255, 0.00);
-        box-shadow: 0 8px 32px 0 rgba(44, 154, 211, 0.37 );
-
+        background: rgb(13, 146, 225);
+        background: linear-gradient(100deg, rgba(13, 146, 225, 1) 0%, rgba(0, 87, 150, 1) 100%);
+        box-shadow: 0 8px 32px 0 rgba(44, 154, 211, 0.37);
         backdrop-filter: blur(20.0px);
         border-radius: 10px;
-        // border: 1px solid rgba(255, 255, 255, 0.18);
-
-        //rest
         height: 100%;
 
+        overflow: auto;
 
         @media (max-width: 992px) {
             transition: transform .3s .1s ease-in-out;
-            transform: translateX(-300px);
+            transform: translateX(-250px);
             width: 250px;
 
             // style of color
-            @include background;
             box-shadow: 0px;
             backdrop-filter: unset;
             border-radius: unset;
             border: 0px;
-            z-index: 1;
+
         }
 
 
         .list {
-            height: 100%;
+            display: flex;
+            flex-direction: column;
 
             ul {
                 list-style-type: none;
                 padding-top: 15px;
 
                 li {
-                    margin: 10px;
+                    margin: 15px;
                     border: none;
+                    height: 100%;
+                    text-transform: uppercase;
 
                     a {
-                        display: block;
+                        display: inline-block;
                         text-decoration: none;
                         padding: 10px;
-                        color: rgb(124, 137, 153);
+                        color: rgb(164, 181, 201);
                         border: 2px solid transparent;
                         transition: 0.3s;
-
+                        vertical-align: middle;
+                        width: 100%;
 
                         svg {
-                            margin-right: 5px;
+                            margin-right: 10px;
+                            font-size: 1.5rem;
+                            vertical-align: middle;
                         }
 
                         :hover {
                             border: none;
+                        }
+
+
+                        p {
+                            display: inline-block;
+                            vertical-align: top;
                         }
                     }
 
@@ -114,13 +189,11 @@
             }
 
             .home {
+                font-size: 1.5rem;
                 text-align: center;
                 height: 5vh;
                 z-index: 1;
-                width: 15%;
-                min-width: 250px;
                 min-height: 50px;
-                font-size: 20px;
                 padding-top: 10px;
                 background-color: transparent;
 
@@ -136,18 +209,23 @@
             }
 
         }
+
+        &.toggle {
+
+            transition: transform .3s .1s ease-in-out;
+            transform: translateX(0px);
+        }
+
     }
 
-}
 
-.sidebar.toggle {
-
-    transition: transform .3s .1s ease-in-out;
-    transform: translateX(0px);
-}
-
-.hamburger.toggle {
-    transform: translateX(250px);
-    transition: transform .3s .1s ease-in-out;
 
 }
+
+
+
+// .hamburger.toggle {
+//     transform: translateX(250px);
+//     transition: transform .3s .1s ease-in-out;
+
+// }

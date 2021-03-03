@@ -15,7 +15,7 @@ html {
         @include background;
         font-family: "Roboto", sans-serif;
         color: white;
-        font-size: 15px;
+        font-size: 11px;
        
 
 
@@ -26,10 +26,7 @@ html {
             height: 100%;
             width: 100%;
             display: grid;
-            grid-template-columns: 100px;
-
-            display: grid;
-            grid-template-columns: 300px 1fr;
+            grid-template-columns: 250px 1fr;
             grid-template-rows: auto;
            
            
@@ -39,7 +36,7 @@ html {
             
             aside {
   
-                width: 300px;
+                width: 250px;
                 @include background;
                 min-height: 100vh;
                 @media (max-width: 992px) {
@@ -76,5 +73,27 @@ html {
             }
 
         }
+
     }
+
+    ::-webkit-scrollbar {
+        width: 10px;
+
+    }
+    
+    ::-webkit-scrollbar-track {
+            background: rgb(47, 121, 190);
+        }
+
+    ::-webkit-scrollbar-thumb{
+        background: rgb(212, 218, 221);
+        border-radius: 30px;
+    }
+
+    
+    ::-webkit-scrollbar-thumb:hover{
+        background:white;
+    border-radius: 30px;
+    }
+
 }
