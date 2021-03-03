@@ -2,5 +2,7 @@
 
 div.card {
     @include color;
-
+    min-width: 100px;
+    min-height: 50px;
+    font-size: 1.5em;
 }

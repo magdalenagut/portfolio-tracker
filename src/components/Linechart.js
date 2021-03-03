@@ -15,7 +15,7 @@ class Linechart extends Component {
       ],
       options: {
         chart: {
-          height: 350,
+          height: '100%',
           type: 'area'
         },
         dataLabels: {
@@ -51,7 +51,7 @@ class Linechart extends Component {
             series={this.state.series}
             type="area"
             width="100%"
-            height="100%"
+          height="100%"
           />
   </div>
     );

@@ -7,13 +7,14 @@ import Assets from "../components/Assets";
 function Dashboard() {
   return (
     <div className="content">
-
+      
           <div className="cards">
             <Card />
           </div>
 
           <Linechart />                  
           <Assets />
+
     </div>
   );
 }

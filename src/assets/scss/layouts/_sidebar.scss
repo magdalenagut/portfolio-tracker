@@ -1,23 +1,6 @@
 @import "../variables/mixins";
 
 
-// button.hamburger {
-//     position: fixed;
-//     z-index: 14;
-//     color: white;
-//     background-color: blue;
-//     cursor: pointer;
-//     top: 0;
-//     left: 0;
-//     transition: transform .3s .1s ease-in-out;
-//     height: 5vh;
-//     width: 50px;
-//     @media (min-width: 992px) {
-//         display: none;
-
-//     }
-// }
-
 .hamburger {
     padding: 10px;
     display: inline-block;
@@ -95,14 +78,15 @@
     height: 100%;
     position: fixed;
     z-index: 13;
-    width: 250px;
+    width: 300px;
     top: 0;
     left: 0;
 
     padding-top: 5vh;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 3%;
+
     padding-bottom: 5vh;
+    display: flex;
 
     @media (max-width: 992px) {
         padding: 0;
@@ -111,6 +95,7 @@
 
     .sidebar {
 
+width: 100%;
         background: rgb(13, 146, 225);
         background: linear-gradient(100deg, rgba(13, 146, 225, 1) 0%, rgba(0, 87, 150, 1) 100%);
         box-shadow: 0 8px 32px 0 rgba(44, 154, 211, 0.37);
@@ -122,8 +107,8 @@
 
         @media (max-width: 992px) {
             transition: transform .3s .1s ease-in-out;
-            transform: translateX(-250px);
-            width: 250px;
+            transform: translateX(-200px);
+            width: 200px;
 
             // style of color
             box-shadow: 0px;
@@ -221,11 +206,3 @@
 
 
 }
-
-
-
-// .hamburger.toggle {
-//     transform: translateX(250px);
-//     transition: transform .3s .1s ease-in-out;
-
-// }

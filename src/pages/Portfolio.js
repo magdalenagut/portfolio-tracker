@@ -6,7 +6,9 @@ function Portfolio() {
  
     return (
       <div className="content">
+         <div className="wallets_row">
         <Wallet/>
+        </div>
       </div>
        );
  };
