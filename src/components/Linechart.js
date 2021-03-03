@@ -10,7 +10,7 @@ class Linechart extends Component {
     
       series: [{
         name: 'portfolio',
-        data: [31, 40, 28, 51, 42, 109, 100]
+        data: [31, 40, 28, 51, 42, 80, 100]
       },
       ],
       options: {
@@ -22,7 +22,8 @@ class Linechart extends Component {
           enabled: false
         },
         stroke: {
-          curve: 'smooth'
+          curve: 'smooth',
+          colors:['#2c9ad3']
         },
         xaxis: {
           type: 'date',
@@ -33,6 +34,9 @@ class Linechart extends Component {
             format: 'dd/MM/yy'
           },
         },
+        fill: {
+          colors: ['#2c9ad3']
+        }
       },
     
     

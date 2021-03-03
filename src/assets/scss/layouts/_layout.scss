@@ -16,7 +16,8 @@ html {
         font-family: "Roboto", sans-serif;
         color: white;
         font-size: 15px;
-        
+       
+
 
         div.app {
             margin: 0 auto;
@@ -24,11 +25,20 @@ html {
             min-height: 100vh;
             height: 100%;
             width: 100%;
-            display: flex;
-            flex-direction: row;
+            display: grid;
+            grid-template-columns: 100px;
 
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            grid-template-rows: auto;
+           
+           
+            @media (max-width: 992px) {
+                grid-template-columns: 1fr;
+            }
+            
             aside {
-
+  
                 width: 300px;
                 @include background;
                 min-height: 100vh;
@@ -41,9 +51,8 @@ html {
             main {
                 display: flex;
                 flex-direction: column;
-                @include background;
-                // flex-grow: 1;
                 flex: auto;
+                overflow: hidden;
 
                 nav {
 
