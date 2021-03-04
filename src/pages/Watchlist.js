@@ -1,10 +1,13 @@
 import React from "react";
+import Watch from "../components/Watch"
 
 
 function Watchlist() {
  
     return (
-      <div className="content"></div>
+      <div className="content">
+        <Watch />
+      </div>
        );
  };
  

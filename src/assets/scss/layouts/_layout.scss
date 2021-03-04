@@ -40,6 +40,7 @@ html {
                 width: 100%;
                 @include background;
                 min-height: 100vh;
+                min-width: 300px;
                 @media (max-width: 992px) {
                     display: none;
                 }

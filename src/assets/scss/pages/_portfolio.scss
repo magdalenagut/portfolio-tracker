@@ -2,15 +2,22 @@
 
 
 
-div.content {
+.content {
 
-    .wallets_row {
-    display: grid;
-         grid-template-columns: 1fr 1fr;
-         grid-row: auto auto;
-  grid-column-gap: 20px;
-  grid-row-gap: 20px;
-}
+      .wallets {
+        flex: 1;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-row: auto auto;
+        grid-column-gap: 30px;
+        grid-row-gap: 30px;
+
+
+        @media (max-width: 768px) {
+          grid-template-columns: 1fr;
+
+        }
+      }
 
 
 }

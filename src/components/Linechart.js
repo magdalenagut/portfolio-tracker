@@ -10,7 +10,7 @@ class Linechart extends Component {
     
       series: [{
         name: 'portfolio',
-        data: [31, 40, 28, 51, 42, 80, 100]
+        data: [31, 60, 30, 80, 60, 80, 100]
       },
       ],
       options: {

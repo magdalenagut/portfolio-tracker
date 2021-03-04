@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 
-
 class Calc extends Component {
   state = {
     currencies: ["USD", "AUD", "SGD", "PHP", "EUR"],
@@ -8,25 +7,25 @@ class Calc extends Component {
     amount: "",
     convertTo: "EUR",
     result: "",
-    date: ""
+    date: "",
   };
 
-  handleSelect = e => {
+  handleSelect = (e) => {
     this.setState(
       {
         [e.target.name]: e.target.value,
-        result: null
+        result: null,
       },
       this.calculate
     );
   };
 
-  handleInput = e => {
+  handleInput = (e) => {
     this.setState(
       {
         amount: e.target.value,
         result: null,
-        date: null
+        date: null,
       },
       this.calculate
     );
@@ -38,19 +37,19 @@ class Calc extends Component {
       return;
     } else {
       fetch(`https://api.exchangeratesapi.io/latest?base=${this.state.base}`)
-        .then(res => res.json())
-        .then(data => {
+        .then((res) => res.json())
+        .then((data) => {
           const date = data.date;
           const result = (data.rates[this.state.convertTo] * amount).toFixed(4);
           this.setState({
             result,
-            date
+            date,
           });
         });
     }
   };
 
-  handleSwap = e => {
+  handleSwap = (e) => {
     const base = this.state.base;
     const convertTo = this.state.convertTo;
     e.preventDefault();
@@ -58,22 +57,19 @@ class Calc extends Component {
       {
         convertTo: base,
         base: convertTo,
-        result: null
+        result: null,
       },
       this.calculate
     );
   };
 
-
-
-
   render() {
     const { currencies, base, amount, convertTo, result, date } = this.state;
     return (
-      <div className="container my-5">
-        <div className="row">
-          <div className="col-lg-6 mx-auto">
-            <div className="card card-body">
+      <div className="calc">
+         
+          <div>
+            <div>
               <h5>
                 {amount} {base} is equevalent to
               </h5>
@@ -101,7 +97,7 @@ class Calc extends Component {
                       onChange={this.handleSelect}
                       className="form-control form-control-lg"
                     >
-                      {currencies.map(currency => (
+                      {currencies.map((currency) => (
                         <option key={currency} value={currency}>
                           {currency}
                         </option>
@@ -127,7 +123,7 @@ class Calc extends Component {
                       onChange={this.handleSelect}
                       className="form-control form-control-lg"
                     >
-                      {currencies.map(currency => (
+                      {currencies.map((currency) => (
                         <option key={currency} value={currency}>
                           {currency}
                         </option>
@@ -145,11 +141,8 @@ class Calc extends Component {
             </div>
           </div>
         </div>
-      </div>
     );
   }
 }
 
 export default Calc;
-
-

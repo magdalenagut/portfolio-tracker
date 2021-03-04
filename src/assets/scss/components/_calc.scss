@@ -1,3 +1,13 @@
+.calc {
+  flex: 1;
+  @include color;
+  overflow: hidden;
+
+}
+
+
+
+
 .swap {
     cursor: pointer;
   }

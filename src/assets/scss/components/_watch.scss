@@ -1,39 +1,38 @@
 @import "../variables/mixins";
 
-.assets {
+.watchlist {
     @include color;
     display: flex;
     flex-direction: column;
-    margin-top: 20px;
     flex: 4;
 
-    .assets_heading {
+    .watchlist_heading {
         text-align: center;
         min-height: 50px;
     }
 
-    .assets_table {
+    .watchlist_table {
         display: flex;
         flex-direction: column;
 
-        .assets_row {
+        .watchlist_row {
             display: flex;
             flex-direction: row;
-            .assets_cell {
+            .watchlist_cell {
                 margin: 1px;
                 background-color: #252731;
                 flex: 6;
             }
         }
 
-        .assets_title {
-            .assets_cell {
+        .watchlist_title {
+            .watchlist_cell {
                 margin: 1px;
                 background-color: #5d627c;
             }
         }
 
-        .assets_new {
+        .watchlist_new {
             text-align: center;
             background-color: #5d627c;
             cursor: pointer;

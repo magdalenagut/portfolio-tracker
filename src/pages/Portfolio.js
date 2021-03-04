@@ -6,7 +6,7 @@ function Portfolio() {
  
     return (
       <div className="content">
-         <div className="wallets_row">
+         <div className="wallets">
         <Wallet/>
         </div>
       </div>

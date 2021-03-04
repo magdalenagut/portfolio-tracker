@@ -1,6 +1,6 @@
 @import "../variables/mixins";
 
-div.content {
+.content {
 
 
           .cards {
@@ -11,13 +11,13 @@ div.content {
                grid-row-gap: 30px;
     
 
-               @media (max-width: 992px) {
-                    grid-template-columns: 1fr 1fr 1fr;
+               @media (max-width: 1200px) {
+                    grid-template-columns: 1fr 1fr;
                     
                 }  
 
-                @media (max-width: 700px) {
-                    grid-template-columns: 1fr 1fr;
+                @media (max-width: 768px) {
+                    grid-template-columns: 1fr ;
                     
                 }  
           }

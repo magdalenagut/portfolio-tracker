@@ -17,7 +17,7 @@ class App extends Component {
             <nav>
               <Navbar />
             </nav>
-            <section className="page">
+            <section>
               <Page />
             </section>
             <footer>
