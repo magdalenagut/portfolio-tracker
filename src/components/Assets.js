@@ -19,6 +19,38 @@ function Assets() {
       value: "13332$",
       return: "4165$",
     },
+    {
+      name: "ETH",
+      price: "8000$",
+      holdings: "1.6",
+      average: "5500$",
+      value: "13332$",
+      return: "4165$",
+    },
+    {
+      name: "ETH",
+      price: "8000$",
+      holdings: "1.6",
+      average: "5500$",
+      value: "13332$",
+      return: "4165$",
+    },
+    {
+      name: "ETH",
+      price: "8000$",
+      holdings: "1.6",
+      average: "5500$",
+      value: "13332$",
+      return: "4165$",
+    },
+    {
+      name: "ETH",
+      price: "8000$",
+      holdings: "1.6",
+      average: "5500$",
+      value: "13332$",
+      return: "4165$",
+    },
   ];
 
   const assets = assetsData.map((item) => (
@@ -33,10 +65,9 @@ function Assets() {
   ));
 
   return (
-    <>
-      <div className="assets">
+    <> <div className="assets_table">
         <div className="assets_heading">Assets</div>
-        <div className="assets_table">
+        <div className="assets_grid">
           <div className="assets_row assets_title">
             <p className="assets_cell">Name</p>
             <p className="assets_cell">Price</p>
@@ -46,11 +77,8 @@ function Assets() {
             <p className="assets_cell">Total Return ona asset</p>
           </div>
           {assets}
-          <div className="assets_row assets_new">
-            New Asset
-          </div>
         </div>
-      </div>
+        </div>
     </>
   );
 }

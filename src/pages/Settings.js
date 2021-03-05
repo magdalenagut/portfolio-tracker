@@ -1,11 +1,19 @@
-import React from "react";
+import React, { Component } from "react";
 
-function Settings() {
- 
+class Settings extends Component {
+  state = {
+    
+  };
+
+
+  render() {
+    
     return (
-      <div className="content">Settings</div>
-       );
- };
- 
- export default Settings;
- 
+      <>
+     Settings
+      </>
+    );
+  }
+}
+
+export default Settings;

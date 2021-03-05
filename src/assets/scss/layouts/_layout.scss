@@ -12,12 +12,10 @@
 html {
 
     body {
-        @include background;
+        background: $dark-navy-blue;
         font-family: "Roboto", sans-serif;
-        color: white;
+        color: $light;
         font-size: 11px;
-
-       
 
 
         div.app {
@@ -38,7 +36,6 @@ html {
             aside {
   
                 width: 100%;
-                @include background;
                 min-height: 100vh;
                 min-width: 300px;
                 @media (max-width: 992px) {
@@ -55,7 +52,7 @@ html {
 
                 nav {
 
-                    height: 5vh;
+                    height: 6vh;
                     min-height: 50px;
                     ;
 
@@ -66,7 +63,7 @@ html {
                 }
 
                 footer {
-                    height: 5vh;
+                    height: 6vh;
                     min-height: 50px;
                     ;
 

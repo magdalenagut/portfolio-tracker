@@ -15,6 +15,7 @@ import Settings from "../pages/Settings";
 const Page = () => {
  
     return (
+        <div className="content">
             <Switch>
                 <Route path="/" exact component={Dashboard}/>
                 <Route path="/porfolio" component={Portfolio}/>
@@ -26,6 +27,7 @@ const Page = () => {
                 <Route path="/settings" component={Settings}/>
                 {/* <Route component={ErrorPage}/>  */}
             </Switch>
+        </div>
        );
  };
  

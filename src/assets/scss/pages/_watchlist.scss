@@ -1,4 +1,39 @@
-// .content {
-//     @include border;
-//     height: 100%;
-// }
+    .watchlist {
+        @include color;
+        display: flex;
+        flex-direction: column;
+        flex: 4;
+    
+        .watchlist_heading {
+            text-align: center;
+            min-height: 50px;
+        }
+    
+        .watchlist_table {
+            display: flex;
+            flex-direction: column;
+    
+            .watchlist_row {
+                display: flex;
+                flex-direction: row;
+                .watchlist_cell {
+                    margin: 1px;
+                    background-color: #252731;
+                    flex: 6;
+                }
+            }
+    
+            .watchlist_title {
+                .watchlist_cell {
+                    margin: 1px;
+                    background-color: #5d627c;
+                }
+            }
+    
+            .watchlist_new {
+                text-align: center;
+                background-color: #5d627c;
+                cursor: pointer;
+            }
+        }
+    }

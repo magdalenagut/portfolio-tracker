@@ -5,6 +5,7 @@
 @import "./layouts/navbar";
 @import "./layouts/sidebar";
 @import "./layouts/footer";
+@import "./layouts/page";
 
 /* Pages */
 @import "./pages/calculator";
@@ -15,16 +16,12 @@
 @import "./pages/settings";
 @import "./pages/transactions";
 @import "./pages/watchlist";
-@import "./pages/page";
+
 
 /* Components */
-@import "./components/button";
-@import "./components/calc";
-@import "./components/wallet";
 @import "./components/card";
 @import "./components/linechart";
 @import "./components/assets";
-@import "./components/watch";
 
 /* Variables */
 @import "./variables/variables";

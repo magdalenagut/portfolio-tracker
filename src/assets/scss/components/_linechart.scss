@@ -1,11 +1,10 @@
 
  @import "../variables/mixins";
 
-.linechart {
-    flex: 4;
+.chart {
     @include color;
     overflow: hidden;
     color: black;
     margin-top: 20px;
-    min-height: 400px;
+    min-height: 400px;    
 }

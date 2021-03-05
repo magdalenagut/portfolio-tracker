@@ -1,9 +1,6 @@
 @import "../variables/mixins";
 
 
-
-.content {
-
       .wallets {
         flex: 1;
         display: grid;
@@ -17,7 +14,13 @@
           grid-template-columns: 1fr;
 
         }
+
+        .wallet {
+         background-image: linear-gradient(to right top, #041016, #051319, #06151b, #06171e, #061921, #061921, #061921, #061921, #06171e, #06151b, #051319, #041016);
+          border-radius: 10px;
+          border: 1px solid rgba(62, 174, 244, 0.7) ;
+          
+
+          min-height: 100px;
+        }
       }
-
-
-}

@@ -16,9 +16,10 @@
     .profile {
         font-size: 1.5rem;
         cursor: pointer;
-        color: rgb(218, 218, 218);
+        color: lightgray;
+
         &:hover {
-            color: white;
+            color: $light;
         }
     }
 }

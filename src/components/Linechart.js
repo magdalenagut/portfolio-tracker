@@ -23,7 +23,8 @@ class Linechart extends Component {
         },
         stroke: {
           curve: 'smooth',
-          colors:['#2c9ad3']
+          colors:['#3eaef4'],
+          width: '3',
         },
         xaxis: {
           type: 'date',
@@ -34,8 +35,9 @@ class Linechart extends Component {
             format: 'dd/MM/yy'
           },
         },
-        fill: {
-          colors: ['#2c9ad3']
+
+       fill: {
+          colors: ['#3eaef4']
         }
       },
     
@@ -45,7 +47,8 @@ class Linechart extends Component {
   
   render() {
     return (
-<div className="linechart">
+<>
+<div className="chart">
           <Chart
             options={this.state.options}
             series={this.state.series}
@@ -53,7 +56,8 @@ class Linechart extends Component {
             width="100%"
           height="100%"
           />
-  </div>
+          </div>
+</>
     );
   }
 }

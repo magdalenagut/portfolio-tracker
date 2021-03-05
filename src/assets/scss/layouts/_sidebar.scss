@@ -31,6 +31,9 @@
             transform: translateY(-50%);
             transition: background-color .1s .2s ease-in-out;
 
+
+
+
             &:before,
             &:after {
                 @include hamburger-line;
@@ -47,6 +50,10 @@
                 top: 10px;
             }
 
+            &:hover {
+                color: $light;
+            }
+
         }
 
     }
@@ -57,6 +64,7 @@
 
         .hamburger__inner {
             background-color: transparent;
+            color: $light;
 
             &:before {
                 transform: translateY(10px) rotate(45deg);
@@ -82,10 +90,10 @@
     top: 0;
     left: 0;
 
-    padding-top: 5vh;
+    padding-top: 6vh;
     padding-left: 50px;
 
-    padding-bottom: 5vh;
+    padding-bottom: 6vh;
     display: flex;
 
     @media (max-width: 992px) {
@@ -95,14 +103,13 @@
 
     .sidebar {
 
-width: 100%;
-        background: rgb(13, 146, 225);
+        width: 100%;
         background: linear-gradient(100deg, rgba(13, 146, 225, 1) 0%, rgba(0, 87, 150, 1) 100%);
-        box-shadow: 0 8px 32px 0 rgba(44, 154, 211, 0.37);
         backdrop-filter: blur(20.0px);
         border-radius: 10px;
-        height: 100%;
 
+
+        height: 100%;
         overflow: auto;
 
         @media (max-width: 992px) {
@@ -137,11 +144,13 @@ width: 100%;
                         display: inline-block;
                         text-decoration: none;
                         padding: 10px;
-                        color: rgb(164, 181, 201);
+                        color: #B7E1FB;
                         border: 2px solid transparent;
                         transition: 0.3s;
                         vertical-align: middle;
                         width: 100%;
+
+                        border: 1px solid transparent;
 
                         svg {
                             margin-right: 10px;
@@ -161,12 +170,19 @@ width: 100%;
                     }
 
                     :hover {
-                        color: white;
+                        color: #F5FBFE;
                     }
 
                     .active {
-                        @include color;
-                        color: white;
+                        background: rgba(39, 50, 61, 0);
+                        box-shadow: 0 5px 10px 0 rgba(44, 154, 211, 0.37);
+                        border-radius: 10px;
+                        border: 1px solid rgba(255, 255, 255, 0.18);
+
+
+
+
+                        color: #F5FBFE;
                     }
 
                 }

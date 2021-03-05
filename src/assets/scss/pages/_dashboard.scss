@@ -1,26 +1,33 @@
 @import "../variables/mixins";
 
-.content {
+
+.cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
 
 
-          .cards {
-               flex: 1;
-               display: grid;
-               grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-               grid-column-gap: 30px;
-               grid-row-gap: 30px;
+    @include xl {
+        grid-template-columns: 1fr 1fr 1fr;
+
+    }
+
+    @include md {
+        grid-template-columns: 1fr 1fr;
+
+    }
+
+    @include sm {
+        grid-template-columns: 1fr;
+
+    }
+}
+
+.linechart {
+
     
+}
+.assets {
 
-               @media (max-width: 1200px) {
-                    grid-template-columns: 1fr 1fr;
-                    
-                }  
-
-                @media (max-width: 768px) {
-                    grid-template-columns: 1fr ;
-                    
-                }  
-          }
-
-
- }
+}

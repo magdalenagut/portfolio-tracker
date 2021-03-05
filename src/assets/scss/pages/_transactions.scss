@@ -1,7 +1,42 @@
-@import "../variables/mixins";
+// @import "../variables/mixins";
 
-.content {
+// .assets {
+//     @include color;
+//     display: flex;
+//     flex-direction: column;
+//     margin-top: 20px;
+//     flex: 4;
 
-     height: 100%;
-}
+//     .assets_heading {
+//         text-align: center;
+//         min-height: 50px;
+//     }
 
+//     .assets_table {
+//         display: flex;
+//         flex-direction: column;
+
+//         .assets_row {
+//             display: flex;
+//             flex-direction: row;
+//             .assets_cell {
+//                 margin: 1px;
+//                 background-color: #252731;
+//                 flex: 6;
+//             }
+//         }
+
+//         .assets_title {
+//             .assets_cell {
+//                 margin: 1px;
+//                 background-color: #5d627c;
+//             }
+//         }
+
+//         .assets_new {
+//             text-align: center;
+//             background-color: #5d627c;
+//             cursor: pointer;
+//         }
+//     }
+// }
