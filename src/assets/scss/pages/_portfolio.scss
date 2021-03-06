@@ -1,26 +1,51 @@
 @import "../variables/mixins";
 
 
-      .wallets {
-        flex: 1;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-row: auto auto;
-        grid-column-gap: 30px;
-        grid-row-gap: 30px;
+.wallets {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-row: auto auto;
+  grid-column-gap: 30px;
+  grid-row-gap: 30px;
 
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
 
-        @media (max-width: 768px) {
-          grid-template-columns: 1fr;
+  }
 
-        }
+  .wallet {
+    background-image: linear-gradient(to right top, #041016, #051319, #06151b, #06171e, #061921, #061921, #061921, #061921, #06171e, #06151b, #051319, #041016);
+    border-radius: 10px;
+    border: 1px solid rgba(62, 174, 244, 0.7);
+    padding: 5%;
+    min-height: 100px;
 
-        .wallet {
-         background-image: linear-gradient(to right top, #041016, #051319, #06151b, #06171e, #061921, #061921, #061921, #061921, #06171e, #06151b, #051319, #041016);
-          border-radius: 10px;
-          border: 1px solid rgba(62, 174, 244, 0.7) ;
-          
+    // .wallet__name__value {
 
-          min-height: 100px;
-        }
-      }
+    //   p {
+    //     &.wallet__name {
+
+    //     }
+
+    //     &.wallet__value {
+
+    //     }
+
+    //   }
+
+    //   .wallet__icon__currency {
+
+    //     p {
+    //       &.wallet__icon {
+
+    //       }
+
+    //       &.wallet__currency {
+            
+    //       }
+    //     }
+    //   }
+
+    }
+  }

@@ -55,7 +55,9 @@ const Sidebar = () => {
         <div className={sidebar ? "sidebar toggle" : "sidebar"}>
           <div className="list">
             <div className="home">
-              <Link to="/">Portfolio Tracker</Link>
+              <Link to="/">
+                <p>Portfolio Tracker</p>
+              </Link>
             </div>
             <ul>{menu}</ul>
           </div>

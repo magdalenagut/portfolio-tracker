@@ -66,15 +66,17 @@ function Assets() {
 
   return (
     <> <div className="assets_table">
-        <div className="assets_heading">Assets</div>
+        <div className="assets_heading">
+          <p>Assets</p>
+        </div>
         <div className="assets_grid">
           <div className="assets_row assets_title">
-            <p className="assets_cell">Name</p>
-            <p className="assets_cell">Price</p>
-            <p className="assets_cell">Holdings</p>
-            <p className="assets_cell">Avg Asset Price</p>
-            <p className="assets_cell">Current Value</p>
-            <p className="assets_cell">Total Return ona asset</p>
+            <p className="assets_title_cell">Name</p>
+            <p className="assets_title_cell">Price</p>
+            <p className="assets_title_cell">Holdings</p>
+            <p className="assets_title_cell">Avg Asset Price</p>
+            <p className="assets_title_cell">Current Value</p>
+            <p className="assets_title_cell">Total Return on a asset</p>
           </div>
           {assets}
         </div>

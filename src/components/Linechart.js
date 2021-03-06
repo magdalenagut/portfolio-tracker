@@ -7,57 +7,59 @@ class Linechart extends Component {
     super(props);
 
     this.state = {
-    
-      series: [{
-        name: 'portfolio',
-        data: [31, 60, 30, 80, 60, 80, 100]
-      },
+      series: [
+        {
+          name: "portfolio",
+          data: [31, 60, 30, 80, 60, 80, 100],
+        },
       ],
       options: {
-        chart: {
-          height: '100%',
-          type: 'area'
-        },
         dataLabels: {
-          enabled: false
+          enabled: false,
         },
         stroke: {
-          curve: 'smooth',
-          colors:['#3eaef4'],
-          width: '3',
+          curve: "smooth",
+          colors: ["#3eaef4"],
+          width: "3",
         },
         xaxis: {
-          type: 'date',
-          categories: ["2018-09-19", "2018-09-19", "2018-09-19", "2018-09-19", "2018-09-19", "2018-09-19", "2018-09-19"]
+          type: "date",
+          categories: [
+            "2018-09-19",
+            "2018-09-19",
+            "2018-09-19",
+            "2018-09-19",
+            "2018-09-19",
+            "2018-09-19",
+            "2018-09-19",
+          ],
         },
         tooltip: {
           x: {
-            format: 'dd/MM/yy'
+            format: "dd/MM/yy",
           },
         },
 
-       fill: {
-          colors: ['#3eaef4']
-        }
+        fill: {
+          colors: ["#3eaef4"],
+        },
       },
-    
-    
     };
   }
-  
+
   render() {
     return (
-<>
-<div className="chart">
+      <>
+        <div className="chart">
           <Chart
             options={this.state.options}
             series={this.state.series}
             type="area"
             width="100%"
-          height="100%"
+            height="100%"
           />
-          </div>
-</>
+        </div>
+      </>
     );
   }
 }

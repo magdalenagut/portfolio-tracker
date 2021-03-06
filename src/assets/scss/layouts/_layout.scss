@@ -10,12 +10,13 @@
 }
 
 html {
+    font-size: 10px;
 
     body {
         background: $dark-navy-blue;
         font-family: "Roboto", sans-serif;
         color: $light;
-        font-size: 11px;
+        
 
 
         div.app {
@@ -52,8 +53,7 @@ html {
 
                 nav {
 
-                    height: 6vh;
-                    min-height: 50px;
+                   height: 50px;
                     ;
 
                 }
@@ -63,8 +63,8 @@ html {
                 }
 
                 footer {
-                    height: 6vh;
-                    min-height: 50px;
+
+                    height: 50px;
                     ;
 
                 }
