@@ -1,6 +1,43 @@
 @import "../variables/mixins";
 
-.content {
-
-     height: 100%;
+.news {
+     display: grid;
+     grid-template-columns: 1fr 1fr 1fr;
+     flex-wrap: wrap;
+     grid-column-gap: 30px;
+     grid-row-gap: 30px;
+     font-size: 1.5rem;
+     
+     .new {
+          display: grid;
+          grid-template-columns: 1fr 1fr ;
+     @include color;
 }
+}
+
+
+
+
+
+
+// const news = newsData.map((item) => (
+//      <div className="new" key={item.id}>
+//        <img src={item.img} alt="thumb" />
+ 
+//        <div className="new__content">
+//          <div className="new__title__text">
+//            <p className="new__title">{item.name}</p>
+//            <p className="new__text">{item.text}</p>
+//          </div>
+//          <div className="new__name__date">
+//            <p className="new__name">{item.name}</p>
+//            <p className="new__date">{item.date}</p>
+//          </div>
+//        </div>
+//      </div>
+//    ));
+ 
+//    return (
+//      <>
+//        <div className="news">{news}</div>
+//      </>

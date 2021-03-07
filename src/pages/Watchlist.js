@@ -1,9 +1,42 @@
 import React from "react";
+import "../assets/scss/portfolio-tracker.scss";
 
 function Watchlist() {
   const watchlistData = [
     {
       name: "BTC",
+      price: "8000$",
+      holdings: "1.6",
+      average: "5500$",
+      value: "13332$",
+      return: "4165$",
+    },
+    {
+      name: "ETH",
+      price: "8000$",
+      holdings: "1.6",
+      average: "5500$",
+      value: "13332$",
+      return: "4165$",
+    },
+    {
+      name: "ETH",
+      price: "8000$",
+      holdings: "1.6",
+      average: "5500$",
+      value: "13332$",
+      return: "4165$",
+    },
+    {
+      name: "ETH",
+      price: "8000$",
+      holdings: "1.6",
+      average: "5500$",
+      value: "13332$",
+      return: "4165$",
+    },
+    {
+      name: "ETH",
       price: "8000$",
       holdings: "1.6",
       average: "5500$",
@@ -32,24 +65,22 @@ function Watchlist() {
   ));
 
   return (
-    <>
-      <div className="watchlist">
-        <div className="watchlist_heading">watchlist</div>
-        <div className="watchlist_table">
+    <> <div className="watchlist_table">
+        <div className="watchlist_heading">
+          <p>watchlist</p>
+        </div>
+        <div className="watchlist_grid">
           <div className="watchlist_row watchlist_title">
-            <p className="watchlist_cell">Name</p>
-            <p className="watchlist_cell">Price</p>
-            <p className="watchlist_cell">Holdings</p>
-            <p className="watchlist_cell">Avg Asset Price</p>
-            <p className="watchlist_cell">Current Value</p>
-            <p className="watchlist_cell">Total Return ona asset</p>
+            <p className="watchlist_title_cell">Name</p>
+            <p className="watchlist_title_cell">Price</p>
+            <p className="watchlist_title_cell">Holdings</p>
+            <p className="watchlist_title_cell">Avg Asset Price</p>
+            <p className="watchlist_title_cell">Current Value</p>
+            <p className="watchlist_title_cell">Total Return on a asset</p>
           </div>
           {watchlist}
-          <div className="watchlist_row watchlist_new">
-            New Asset
-          </div>
         </div>
-      </div>
+        </div>
     </>
   );
 }

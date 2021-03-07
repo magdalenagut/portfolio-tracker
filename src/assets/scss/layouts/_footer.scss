@@ -2,7 +2,18 @@
 
 .footer {
     display: flex;
-    justify-content:space-around;
+    justify-content: center;
     align-items:center;
     height: 100%;
+
+.footer__text {
+    margin-right:1%;
+}
+
+    a {
+        color: $blue;
+  font-size: 1rem;
+            text-decoration: none;
+
+    }
 }

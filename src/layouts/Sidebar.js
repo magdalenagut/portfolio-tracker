@@ -20,9 +20,9 @@ const list = [
 ];
 
 const Sidebar = () => {
-  const [sidebar, setSidebar] = useState(false);
+  const [transparent, setTransparent] = useState(false);
   const [hamburger, setHamburger] = useState(false);
-  const showSidebar = () => setSidebar(!sidebar);
+  const showTransparent = () => setTransparent(!transparent);
   const showHamburger = () => setHamburger(!hamburger);
 
   const menu = list.map((item) => (
@@ -42,7 +42,7 @@ const Sidebar = () => {
       <div
         className={hamburger ? "hamburger toggle" : "hamburger"}
         onClick={() => {
-          showSidebar();
+          showTransparent();
           showHamburger();
         }}
       >
@@ -51,8 +51,8 @@ const Sidebar = () => {
         </span>
       </div>
 
-      <div className="transparent">
-        <div className={sidebar ? "sidebar toggle" : "sidebar"}>
+      <div className={transparent ? "transparent toggle" : "transparent"}>
+        <div className="sidebar">
           <div className="list">
             <div className="home">
               <Link to="/">

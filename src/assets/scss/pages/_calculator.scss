@@ -1,14 +1,11 @@
 @import "../variables/mixins";
 
-    .calculator {
-        flex: 1;
-        @include color;
-        overflow: hidden;
-      
-      }
-    
-      
-      .swap {
-          cursor: pointer;
-        }
-        
+.calculator {
+  @include color;
+  flex: 1;
+}
+
+
+.swap {
+  cursor: pointer;
+}

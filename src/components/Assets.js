@@ -1,59 +1,63 @@
-import React from "react";
+import React, { Component } from "react";
 import "../assets/scss/portfolio-tracker.scss";
 
-function Assets() {
-  const assetsData = [
-    {
-      name: "BTC",
-      price: "8000$",
-      holdings: "1.6",
-      average: "5500$",
-      value: "13332$",
-      return: "4165$",
-    },
-    {
-      name: "ETH",
-      price: "8000$",
-      holdings: "1.6",
-      average: "5500$",
-      value: "13332$",
-      return: "4165$",
-    },
-    {
-      name: "ETH",
-      price: "8000$",
-      holdings: "1.6",
-      average: "5500$",
-      value: "13332$",
-      return: "4165$",
-    },
-    {
-      name: "ETH",
-      price: "8000$",
-      holdings: "1.6",
-      average: "5500$",
-      value: "13332$",
-      return: "4165$",
-    },
-    {
-      name: "ETH",
-      price: "8000$",
-      holdings: "1.6",
-      average: "5500$",
-      value: "13332$",
-      return: "4165$",
-    },
-    {
-      name: "ETH",
-      price: "8000$",
-      holdings: "1.6",
-      average: "5500$",
-      value: "13332$",
-      return: "4165$",
-    },
-  ];
+class Assets extends Component {
+ state = {
+   assetsData: [
+  {
+    name: "BTC",
+    price: "8000$",
+    holdings: "1.6",
+    average: "5500$",
+    value: "13332$",
+    return: "4165$",
+  },
+  {
+    name: "ETH",
+    price: "8000$",
+    holdings: "1.6",
+    average: "5500$",
+    value: "13332$",
+    return: "4165$",
+  },
+  {
+    name: "ETH",
+    price: "8000$",
+    holdings: "1.6",
+    average: "5500$",
+    value: "13332$",
+    return: "4165$",
+  },
+  {
+    name: "ETH",
+    price: "8000$",
+    holdings: "1.6",
+    average: "5500$",
+    value: "13332$",
+    return: "4165$",
+  },
+  {
+    name: "ETH",
+    price: "8000$",
+    holdings: "1.6",
+    average: "5500$",
+    value: "13332$",
+    return: "4165$",
+  },
+  {
+    name: "ETH",
+    price: "8000$",
+    holdings: "1.6",
+    average: "5500$",
+    value: "13332$",
+    return: "4165$",
+  },
+ ]
+}
 
-  const assets = assetsData.map((item) => (
+render()
+{
+  const assets = this.state.assetsData.map((item) => (
     <div className="assets_row" key={item.name}>
       <p className="assets_cell">{item.name}</p>
       <p className="assets_cell">{item.price}</p>
@@ -83,6 +87,7 @@ function Assets() {
         </div>
     </>
   );
+}
 }
 
 export default Assets;

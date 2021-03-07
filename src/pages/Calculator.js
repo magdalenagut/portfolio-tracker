@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import { IoIosSwap } from "react-icons/io";
 class Calculator extends Component {
   state = {
     currencies: ["USD", "AUD", "SGD", "PHP", "EUR"],
@@ -7,7 +7,6 @@ class Calculator extends Component {
     amount: "",
     convertTo: "EUR",
     result: "",
-    date: "",
   };
 
   handleSelect = (e) => {
@@ -25,7 +24,6 @@ class Calculator extends Component {
       {
         amount: e.target.value,
         result: null,
-        date: null,
       },
       this.calculate
     );
@@ -39,11 +37,9 @@ class Calculator extends Component {
       fetch(`https://api.exchangeratesapi.io/latest?base=${this.state.base}`)
         .then((res) => res.json())
         .then((data) => {
-          const date = data.date;
           const result = (data.rates[this.state.convertTo] * amount).toFixed(4);
           this.setState({
             result,
-            date,
           });
         });
     }
@@ -64,43 +60,33 @@ class Calculator extends Component {
   };
 
   render() {
-    const { currencies, base, amount, convertTo, result, date } = this.state;
+    const { currencies, base, amount, convertTo, result} = this.state;
     return (
       <>
-      <div className="calculator">
-         
-          <div>
-            <div>
-
-              <h5>
-                {amount} {base} is equevalent to
-              </h5>
-
-              <h2>
+        <div className="calculator">
+              <p>
+                {amount} {base} {`is equal to `}
                 {amount === ""
                   ? "0"
                   : result === null
                   ? "Calculating..."
                   : result}{" "}
                 {convertTo}
-              </h2>
-
-              <p>As of {amount === "" ? "/ / /" : date === null ? "" : date}</p>
+              </p>
 
               <div className="row">
-                <div>
                   <form>
                     <input
                       type="number"
                       value={amount}
                       onChange={this.handleInput}
-                      className="form-control form-control-lg mx-3"
+                      className="form__input"
                     />
                     <select
                       name="base"
                       value={base}
                       onChange={this.handleSelect}
-                      className="form-control form-control-lg"
+                      className="form__select"
                     >
                       {currencies.map((currency) => (
                         <option key={currency} value={currency}>
@@ -109,7 +95,7 @@ class Calculator extends Component {
                       ))}
                     </select>
                   </form>
-
+                  
                   <form>
                     <input
                       disabled={true}
@@ -120,7 +106,7 @@ class Calculator extends Component {
                           ? "Calculating..."
                           : result
                       }
-                      className="form-control form-control-lg mx-3"
+                      className="form__select"
                     />
                     <select
                       name="convertTo"
@@ -135,20 +121,15 @@ class Calculator extends Component {
                       ))}
                     </select>
                   </form>
-                </div>
 
+                </div>
                 <div>
-                  <h1 onClick={this.handleSwap} className="swap">
-                    &#8595;&#8593;
-                  </h1>
+                  <div className="swap">
+                  <IoIosSwap onClick={this.handleSwap}/>
+                  </div>
                 </div>
-
               </div>
-            
-            </div>
-          </div>
-        </div>
-        </>
+      </>
     );
   }
 }
