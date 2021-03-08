@@ -8,7 +8,7 @@
     height: 100%;
     padding-right: 50px;
 
-    @media (max-width: 768px) {
+    @include md {
         padding-right: 30px;
         
     }  

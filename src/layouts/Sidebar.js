@@ -29,7 +29,7 @@ const Sidebar = () => {
     <li key={item.name}>
       <NavLink to={item.path} exact={item.exact ? item.exact : false}>
         <p>
-          {" "}
+          {/* {" "} */}
           {item.icon}
           {item.name}
         </p>

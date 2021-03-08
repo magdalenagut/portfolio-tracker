@@ -1,30 +1,23 @@
 @import "../variables/mixins";
 
 .assets_table {
-    @include color;
-    
+    @include border-light;
+    @include border-radius;
     display: flex;
     flex-direction: column;
     margin-top: 20px;
-
-
     padding: 2%;
 
     .assets_heading {
-        background: rgba(47, 120, 188, 1);
-box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.2 );
-backdrop-filter: blur( 8.0px );
-border-radius: 10px;
-
-
-
-margin-bottom: 2%;
-     min-height: 30px;
+        border-radius: 10px;
+        background: linear-gradient(100deg, rgba(13, 146, 225, 0.7) 0%, rgba(0, 87, 150, 0.7) 100%);
+        margin-bottom: 2%;
+        min-height: 30px;
         display: flex;
         justify-content: center;
         align-items: center;
         font-size: 1.5rem;
-       
+
     }
 
     .assets_grid {
@@ -32,17 +25,13 @@ margin-bottom: 2%;
         flex-direction: column;
         font-size: 1rem;
         color: lightgrey;
-
-
         border-radius: 10px;
         padding: 5px;
 
         .assets_row {
             border-bottom: 0.5px rgba(255, 255, 255, 0.18) solid;
-
             display: flex;
             flex-direction: row;
-
 
             .assets_cell {
                 padding: 1%;
@@ -57,15 +46,13 @@ margin-bottom: 2%;
         }
 
         .assets_title {
-
             text-transform: uppercase;
 
             .assets_title_cell {
                 padding: 1%;
                 flex: 6;
-                // background: rgba(62, 174, 244,0.5);
                 font-size: 1.5em;
-
+                
                 @include sm {
                     font-size: 1rem;
                 }

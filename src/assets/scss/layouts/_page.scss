@@ -2,12 +2,12 @@
      width: 100%;
      display: flex;
     flex-direction: column;
-
+    height: 100%;
 
     padding-left: 50px;
     padding-right: 50px;
 
-    @media (max-width: 768px) {
+    @include md {
         padding-left: 30px;
         padding-right: 30px;
         

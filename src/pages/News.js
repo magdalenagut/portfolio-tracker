@@ -6,31 +6,26 @@ class News extends Component {
     articles: [] 
   } 
 
-  getDataFromGitHub() { 
-    const apiUrl = `http://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=42aabc8769514a8fbfa3eb3457961ae8`; 
+  getData() { 
+    const apiUrl = `https://newsapi.org/v2/top-headlines?sources=crypto-coins-news&apiKey=42d323055b9d49e6bab62f84d073699c`; 
     fetch(apiUrl) 
       .then(response => response.json()) 
-      .then(data => this.setState({ articles: data.filter((item, i) => i < 9) })) 
-      .catch(err => console.log(err)); 
+      .then(data => this.setState({articles: data.filter((item, i) => i < 9) })) 
+      .catch(error => console.log(error)); 
   } 
 
   componentDidMount() { 
-    this.getDataFromGitHub(); 
+    this.getData(); 
   } 
 
   render() { 
 
-    
     return (
       <> 
       <div className="list">
-      {this.state.articles.map((article) => (
+      {this.state.articles.map((item) => (
         <div className="listItem">
-          <h2>{article.author}</h2>
-          <img src={article.avatar_url} alt="avatar" />
-          <div>
-            <a href={article.url}>Link</a>
-          </div>
+          <h2>{item.author}</h2>
         </div>
       ))}
     </div>

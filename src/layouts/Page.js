@@ -17,7 +17,7 @@ const Page = () => {
     return (
         <div className="content">
             <Switch>
-                <Route path="/" exact component={Dashboard}/>
+                <Route path="/" exact={true} component={Dashboard}/>
                 <Route path="/porfolio" component={Portfolio}/>
                 <Route path="/transactions" component={Transactions}/>
                 <Route path="/transactions/new_transaction" component={NewTransaction} />

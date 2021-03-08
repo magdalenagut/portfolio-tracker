@@ -1,6 +1,6 @@
 @import "../variables/mixins";
     .watchlist {
-        @include color;
+        @include border-light;
         display: flex;
         flex-direction: column;
         flex: 4;

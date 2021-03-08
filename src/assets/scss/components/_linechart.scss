@@ -2,7 +2,8 @@
  @import "../variables/mixins";
 
 .chart {
-    @include color;
+    @include border-light;
+    @include border-radius;
     overflow: hidden;
     color: black;
     margin-top: 20px;

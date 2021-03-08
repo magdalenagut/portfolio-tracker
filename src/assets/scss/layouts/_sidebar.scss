@@ -2,6 +2,9 @@
 
 
 .hamburger {
+
+    display: none;
+    @include lg {
     padding: 10px;
     display: inline-block;
     position: fixed;
@@ -12,9 +15,6 @@
     left: 0;
     z-index: 20;
     transition: transform .3s .1s ease-in-out;
-
-    @media (min-width: 992px) {
-        display: none;
 
     }
 
@@ -30,9 +30,6 @@
             top: 50%;
             transform: translateY(-50%);
             transition: background-color .1s .2s ease-in-out;
-
-
-
 
             &:before,
             &:after {
@@ -60,8 +57,12 @@
 
 
     &.toggle {
-        transform: translatex(200px);
+        transform: translatex(300px);
 
+        @include md {
+            transform: translatex(200px);
+        
+        }
         .hamburger__inner {
             background-color: transparent;
             color: $light;
@@ -89,32 +90,35 @@
     width: 300px;
     top: 0;
     left: 0;
-
     padding-top: 50px;
     padding-left: 50px;
-
     padding-bottom: 50px;
     display: flex;
 
-    @media (max-width: 992px) {
+    @include lg {
         padding: 0;
+        transition: transform .3s .1s ease-in-out;
+            transform: translateX(-300px);
 
+    }
+    
+    @include md {
+        padding: 0;
         transition: transform .3s .1s ease-in-out;
             transform: translateX(-200px);
-            width: 200px;
-    
+            width: 200px;    
     }
 
-    .sidebar {
+   
 
+    .sidebar {
+        @include gradient-light;
+        @include border-radius;
         width: 100%;
-        background: linear-gradient(100deg, rgba(13, 146, 225, 1) 0%, rgba(0, 87, 150, 1) 100%);
-        backdrop-filter: blur(20.0px);
-        border-radius: 10px;
         height: 100%;
         overflow: auto;
 
-        @media (max-width: 992px) {
+        @include lg {
 
             // style of color
             box-shadow: 0px;
@@ -144,6 +148,7 @@
                         display: inline-block;
                         text-decoration: none;
                         padding: 10px;
+                        
                         color: #B7E1FB;
                         border: 2px solid transparent;
                         transition: 0.3s;
@@ -178,10 +183,6 @@
                         box-shadow: 0 5px 10px 0 rgba(44, 154, 211, 0.37);
                         border-radius: 10px;
                         border: 1px solid rgba(255, 255, 255, 0.18);
-
-
-
-
                         color: #F5FBFE;
                     }
 
@@ -200,7 +201,7 @@
                 padding-top: 10px;
                 background-color: transparent;
 
-                @media (max-width: 992px) {
+                @include lg {
                     display: none;
                 }
 
