@@ -20,7 +20,7 @@ const Page = () => {
                 <Route path="/" exact={true} component={Dashboard}/>
                 <Route path="/porfolio" component={Portfolio}/>
                 <Route path="/transactions" component={Transactions}/>
-                <Route path="/transactions/new_transaction" component={NewTransaction} />
+                <Route path="/new_transaction" component={NewTransaction} />
                 <Route path="/calculator" component={Calculator}/>
                 <Route path="/wachlist" component={Watchlist}/>
                 <Route path="/news" component={News}/>

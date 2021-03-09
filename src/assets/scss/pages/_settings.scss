@@ -134,11 +134,10 @@
                     outline: none;
                     border: none;
                     color: #F5FBFE;
+                       transition: 0.3s;
 
                     &:hover {
-                         scale: (1, 2);
-                         transition: transform .3s .1s ease-in-out;
-
+  
                          color: $light;
                          box-shadow: 0 5px 10px 0 rgba(44, 154, 211, 0.37);
                     }

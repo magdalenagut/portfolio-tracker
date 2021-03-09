@@ -50,10 +50,11 @@ class Transactions extends Component {
             {transactions}
           </div>
           
+          
+          <p className="add">
+          <Link to="/new_transaction"><IoMdAdd/></Link>
+            </p>
 
-          <Link to="/transactions/new_transaction">
-            <p className="add"><IoMdAdd/></p>    
-          </Link>
           <div className="btn">
             <button>Delete transaction</button>
             <button>Download svg</button>
