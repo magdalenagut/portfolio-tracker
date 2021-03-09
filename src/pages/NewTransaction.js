@@ -4,7 +4,9 @@ function NewTransaction() {
  
     return (
       <>
-      aa
+      <div>
+        ELO
+      </div>
       </>
        );
  };

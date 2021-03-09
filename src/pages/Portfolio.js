@@ -5,26 +5,26 @@ class Portfolio extends Component {
     state = {walletData: [
     {
       id: "1",
-      value: "CRYPTO",
-      status: "1.000",
+      name: "CRYPTO",
+      status: "5.000",
       currency: "BTC",
     },
     {
       id: "2",
-      value: "NghfhLET",
-      status: "2.000",
-      currency: "PLN",
+      name: "",
+      status: "0.000",
+      currency: "USD",
     },
     {
       id: "3",
-      value: "NEfghfghALLET",
-      status: "3.000",
-      currency: "EUR",
+      name: "",
+      status: "0.000",
+      currency: "USD",
     },
     {
       id: "4",
-      value: "fghfgLET",
-      status: "4.000",
+      valname: "",
+      status: "0.000",
       currency: "USD",
     },
   ]
@@ -40,34 +40,33 @@ class Portfolio extends Component {
 
 
 
-  handleSubmit = (e) => {
+  handleChange = (e) => {
     e.preventDefault();
     console.log("submited");
   };
 
-
   render() {
     const wallet = this.state.walletData.map((item) => (
-      <div className="wallet_background" >
+      <div className="wallet_background" key={item.id}>
         <div className="wallet">
-          <div className="wallet__name__value">
-            <form onSubmit={this.handleSubmit} noValidate >
-            
-            <input 
-               key= {this.state.id}
+          
+          <div className="wallet__name">
+            <form onSubmit={this.handleChange} noValidate >
+            <input
                 type="text"
-                name={this.state.value}
-                value={this.state.value}
+                name={this.state.name}
+                value={item.name}
                 placeholder="Name your wallet"
                 onChange={this.handleChange} 
               />
-
             </form>
-            <p className="wallet__value" >{item.status}</p>
           </div>
-          <div className="wallet__icon__currency">
+
+          <div className="wallet__value__currency">
+          <p className="wallet__value" >{item.status}</p>
             <p className="wallet__currency">{item.currency}</p>
           </div>
+
         </div>
       </div>
     ));

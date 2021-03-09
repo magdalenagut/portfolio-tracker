@@ -6,7 +6,7 @@ function Footer() {
     return (
       <div className="footer">
         <p className="footer__text">
-          © 2021 Portfolio Tracker made by mgut
+          © 2021 Portfolio Tracker
         </p>
         
       <Link to="/">

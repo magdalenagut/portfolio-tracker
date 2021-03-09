@@ -60,75 +60,83 @@ class Calculator extends Component {
   };
 
   render() {
-    const { currencies, base, amount, convertTo, result} = this.state;
+    const { currencies, base, amount, convertTo, result } = this.state;
     return (
       <>
-        <div className="calculator">
-              <p>
-                {amount} {base} {`is equal to `}
-                {amount === ""
-                  ? "0"
-                  : result === null
-                  ? "Calculating..."
-                  : result}{" "}
-                {convertTo}
-              </p>
+        {" "}
+        <div className="calculator_background">
+          <div className="wrap">
+            <div className="calculator">
+            <p className="result">
+              {amount} {base} {`is equal to `}
+              {amount === ""
+                ? "0"
+                : result === null
+                ? "Calculating..."
+                : result}{" "}
+              {convertTo}
+            </p>
 
-              <div className="row">
-                  <form>
-                    <input
-                      type="number"
-                      value={amount}
-                      onChange={this.handleInput}
-                      className="form__input"
-                    />
-                    <select
-                      name="base"
-                      value={base}
-                      onChange={this.handleSelect}
-                      className="form__select"
-                    >
-                      {currencies.map((currency) => (
-                        <option key={currency} value={currency}>
-                          {currency}
-                        </option>
-                      ))}
-                    </select>
-                  </form>
-                  
-                  <form>
-                    <input
-                      disabled={true}
-                      value={
-                        amount === ""
-                          ? "0"
-                          : result === null
-                          ? "Calculating..."
-                          : result
-                      }
-                      className="form__select"
-                    />
-                    <select
-                      name="convertTo"
-                      value={convertTo}
-                      onChange={this.handleSelect}
-                      className="form-control form-control-lg"
-                    >
-                      {currencies.map((currency) => (
-                        <option key={currency} value={currency}>
-                          {currency}
-                        </option>
-                      ))}
-                    </select>
-                  </form>
+            <div className="row">
+              <form className="first_select">
+                <input
+                  type="number"
+                  value={amount}
+                  onChange={this.handleInput}
+                  placeholder="Enter a number"
+                />
+                <select
+                  name="base"
+                  value={base}
+                  onChange={this.handleSelect}
+                  placeholder="Enter a number"
+                >
+                  {currencies.map((currency) => (
+                    <option key={currency} value={currency}>
+                      {currency}
+                    </option>
+                  ))}
+                </select>
+              </form>
 
-                </div>
-                <div>
-                  <div className="swap">
-                  <IoIosSwap onClick={this.handleSwap}/>
-                  </div>
-                </div>
-              </div>
+           
+
+              <form className="second_select">
+                <input
+                  disabled={true}
+                  value={
+                    amount === ""
+                      ? "0"
+                      : result === null
+                      ? "Calculating..."
+                      : result
+                  }
+                />
+                <select
+                  name="convertTo"
+                  value={convertTo}
+                  onChange={this.handleSelect}
+                >
+                  {currencies.map((currency) => (
+                    <option key={currency} value={currency}>
+                      {currency}
+                    </option>
+                  ))}
+                </select>
+              </form>
+
+
+
+            </div>
+
+            <div className="swap">
+
+<p><IoIosSwap onClick={this.handleSwap} /></p> 
+</div>
+
+          </div>
+        </div>
+        </div>
       </>
     );
   }
