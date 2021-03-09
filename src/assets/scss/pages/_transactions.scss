@@ -11,8 +11,7 @@
     flex: 1;
 
     .transactions_heading {
-        border-radius: 10px;
-        background: linear-gradient(100deg, rgba(13, 146, 225, 0.7) 0%, rgba(0, 87, 150, 0.7) 100%);
+    
         margin-bottom: 2%;
         min-height: 30px;
         display: flex;
@@ -20,6 +19,9 @@
         align-items: center;
         font-size: 1.5rem;
         width: 100%;
+        font-size: 3rem;
+        font-weight: 100;
+    
     }
 
 
@@ -35,10 +37,14 @@
 
             &.transactions_title {
                 text-transform: uppercase;
+color: $dark-blue;
+              
+                
             }
 
             .transactions_cell {
-                padding: 1rem;
+                padding-top: 1.5rem;
+                padding-bottom:1.5rem;
                 font-size: 1.5rem;
                 min-width: 20px;
 
@@ -117,115 +123,3 @@
     }
 
 }
-
-
-
-
-// @import "../variables/mixins";
-
-// .transactions_table {
-//     @include border-light;
-//     @include border-radius;
-//     display: flex;
-//     flex-direction: column;
-//     padding: 2%;
-//     flex: 1;
-
-
-//     .transactions_heading {
-//         border-radius: 10px;
-//         background: linear-gradient(100deg, rgba(13, 146, 225, 0.7) 0%, rgba(0, 87, 150, 0.7) 100%);
-//         margin-bottom: 2%;
-//         min-height: 30px;
-//         display: flex;
-//         justify-content: center;
-//         align-items: center;
-//         font-size: 1.5rem;
-//         width: 100%;
-//     }
-
-//     .transactions_grid {
-//         display: flex;
-//         flex-direction: column;
-//         font-size: 1rem;
-//         color: lightgrey;
-//         border-radius: 10px;
-//         padding: 5px;
-
-//         .transactions_row {
-//             border-bottom: 0.5px rgba(255, 255, 255, 0.18) solid;
-//             display: flex;
-//             flex-direction: row;
-
-//             .transactions_cell {
-//                 padding: 1%;
-//                 margin: 1px;
-//                 flex: 6;
-//                 font-size: 1.5rem;
-
-//                 @include sm {
-//                     font-size: 1rem;
-//                 }
-//             }
-//         }
-
-//         .transactions_title {
-//             text-transform: uppercase;
-
-//             .transactions_title_cell {
-//                 padding: 1%;
-//                 flex: 6;
-//                 font-size: 1.5em;
-
-//                 @include sm {
-//                     font-size: 1rem;
-//                 }
-//             }
-//         }
-
-//     }
-
-// .add {
-//     display: flex;
-//     flex-direction: row;
-//     justify-content: center;
-//     align-items: center;
-
-//     svg {}
-// }
-
-// .btn {
-//     display: flex;
-//     flex-direction: row;
-//     justify-content: center;
-//     align-items: center;
-//     padding: 2%;
-
-
-
-//     button {
-//         margin: 1%;
-//         font-size: 1.5rem;
-//         font-weight: 100;
-//         padding: 10px;
-//         cursor: pointer;
-//         color: $light;
-//         @include gradient-light;
-//         @include border-radius;
-//         outline: none;
-//         border: none;
-//         color: #F5FBFE;
-
-//         &:hover {
-//             scale: (1, 2);
-//             transition: transform .3s .1s ease-in-out;
-
-//             color: $light;
-//             box-shadow: 0 5px 10px 0 rgba(44, 154, 211, 0.37);
-//         }
-
-
-//     }
-// }
-
-// }

@@ -1,40 +1,65 @@
 @import "../variables/mixins";
-    .watchlist {
-        @include border-light;
+
+.watchlist_table {
+    @include border-light;
+    @include border-radius;
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    word-wrap: break-word;
+    flex: 1;
+
+    .watchlist_heading {
+        @include border-radius;
+        // background: linear-gradient(100deg, rgba(13, 146, 225, 0.7) 0%, rgba(0, 87, 150, 0.7) 100%);
+        margin-bottom: 2%;
+        min-height: 30px;
         display: flex;
-        flex-direction: column;
-        flex: 4;
-    
-        .watchlist_heading {
-            text-align: center;
-            min-height: 50px;
-        }
-    
-        .watchlist_table {
-            display: flex;
-            flex-direction: column;
-    
-            .watchlist_row {
-                display: flex;
-                flex-direction: row;
-                .watchlist_cell {
-                    margin: 1px;
-                    background-color: #252731;
-                    flex: 6;
-                }
-            }
-    
-            .watchlist_title {
-                .watchlist_cell {
-                    margin: 1px;
-                    background-color: #5d627c;
-                }
-            }
-    
-            .watchlist_new {
-                text-align: center;
-                background-color: #5d627c;
-                cursor: pointer;
-            }
-        }
+        justify-content: center;
+        align-items: center;
+        font-size: 3rem;
+        font-weight: 100;
+        width: 100%;
+       
     }
+
+
+    .watchlist_grid {
+        
+        font-size: 1rem;
+        color: lightgrey;
+        border-radius: 10px;
+
+        .watchlist_row {
+            border-bottom: 0.5px rgba(255, 255, 255, 0.18) solid;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+
+            &.watchlist_title {
+                text-transform: uppercase;
+         
+                color: $dark-blue;
+            }
+
+            .watchlist_cell {
+                padding-top: 1.5rem;
+                padding-bottom:1.5rem;
+                font-size: 1.5rem;
+                min-width: 20px;
+
+                @include sm {
+                    font-size: 1rem;
+
+                }
+
+            }
+
+        }
+
+
+    }
+
+
+
+}

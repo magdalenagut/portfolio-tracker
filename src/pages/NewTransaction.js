@@ -45,7 +45,11 @@ class NewTransaction extends Component {
         <div className="new_transaction_background">
           <div className="new_transaciton">
             <form onSubmit={this.handleSubmit} noValidate>
+           
               <div className="panel">
+              <div className="transactions_heading">
+            <p>New Transaction</p>
+          </div>
                 <div className="panel_row">
                   <div className="panel_cell">
                     <label htmlFor="portfolio">New Transaction</label>

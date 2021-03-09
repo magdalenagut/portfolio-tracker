@@ -1,153 +1,88 @@
-
 import React, { Component } from "react";
 
-class News extends Component { 
-  state = { 
-    articles: [] 
-  } 
+class News extends Component {
+  state = {
+    newsData: [
+      {
+        id: "1",
+        img: "https://picsum.photos/300/201",
+        title: "Sample title",
+        text:
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur beatae expedita modi cumque aliquid assumenda molestias quisquam repellendus iusto recusandae soluta officia ea consequuntur animi laudantium eaque quo vel eligendi, dolore doloribus harum. Necessitatibus laudantium, dolorem ipsa vero magnam accusamus! Rerum odio molestias quos inventore excepturi quam accusantium totam saepe.",
+      },
+      {
+        id: "2",
+        img: "https://picsum.photos/300/202",
+        title: "Sample title",
+        text:
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur beatae expedita modi cumque aliquid assumenda molestias quisquam repellendus iusto recusandae soluta officia ea consequuntur animi laudantium eaque quo vel eligendi, dolore doloribus harum. Necessitatibus laudantium, dolorem ipsa vero magnam accusamus! Rerum odio molestias quos inventore excepturi quam accusantium totam saepe.",
+      },
+      {
+        id: "3",
+        img: "https://picsum.photos/300/203",
+        title: "Sample title",
+        text:
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur beatae expedita modi cumque aliquid assumenda molestias quisquam repellendus iusto recusandae soluta officia ea consequuntur animi laudantium eaque quo vel eligendi, dolore doloribus harum. Necessitatibus laudantium, dolorem ipsa vero magnam accusamus! Rerum odio molestias quos inventore excepturi quam accusantium totam saepe.",
+      },
+      {
+        id: "4",
+        img: "https://picsum.photos/300/204",
+        title: "Sample title",
+        text:
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur beatae expedita modi cumque aliquid assumenda molestias quisquam repellendus iusto recusandae soluta officia ea consequuntur animi laudantium eaque quo vel eligendi, dolore doloribus harum. Necessitatibus laudantium, dolorem ipsa vero magnam accusamus! Rerum odio molestias quos inventore excepturi quam accusantium totam saepe.",
+      },
+      {
+        id: "5",
+        img: "https://picsum.photos/300/205",
+        title: "Sample title",
+        text:
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur beatae expedita modi cumque aliquid assumenda molestias quisquam repellendus iusto recusandae soluta officia ea consequuntur animi laudantium eaque quo vel eligendi, dolore doloribus harum. Necessitatibus laudantium, dolorem ipsa vero magnam accusamus! Rerum odio molestias quos inventore excepturi quam accusantium totam saepe.",
+      },
+      {
+        id: "6",
+        img: "https://picsum.photos/300/206",
+        title: "Sample title",
+        text:
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur beatae expedita modi cumque aliquid assumenda molestias quisquam repellendus iusto recusandae soluta officia ea consequuntur animi laudantium eaque quo vel eligendi, dolore doloribus harum. Necessitatibus laudantium, dolorem ipsa vero magnam accusamus! Rerum odio molestias quos inventore excepturi quam accusantium totam saepe.",
+      },
+      {
+        id: "7",
+        img: "https://picsum.photos/300/207",
+        title: "Sample title",
+        text:
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur beatae expedita modi cumque aliquid assumenda molestias quisquam repellendus iusto recusandae soluta officia ea consequuntur animi laudantium eaque quo vel eligendi, dolore doloribus harum. Necessitatibus laudantium, dolorem ipsa vero magnam accusamus! Rerum odio molestias quos inventore excepturi quam accusantium totam saepe.",
+      },
+      {
+        id: "8",
+        img: "https://picsum.photos/300/208",
+        title: "Sample title",
+        text:
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur beatae expedita modi cumque aliquid assumenda molestias quisquam repellendus iusto recusandae soluta officia ea consequuntur animi laudantium eaque quo vel eligendi, dolore doloribus harum. Necessitatibus laudantium, dolorem ipsa vero magnam accusamus! Rerum odio molestias quos inventore excepturi quam accusantium totam saepe.",
+      },
+      {
+        id: "9",
+        img: "https://picsum.photos/300/209",
+        title: "Sample title",
+        text:
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur beatae expedita modi cumque aliquid assumenda molestias quisquam repellendus iusto recusandae soluta officia ea consequuntur animi laudantium eaque quo vel eligendi, dolore doloribus harum. Necessitatibus laudantium, dolorem ipsa vero magnam accusamus! Rerum odio molestias quos inventore excepturi quam accusantium totam saepe.",
+      },
+    ],
+  };
 
-  getData() { 
-    const apiUrl = `https://newsapi.org/v2/top-headlines?sources=crypto-coins-news&apiKey=42d323055b9d49e6bab62f84d073699c`; 
-    fetch(apiUrl) 
-      .then(response => response.json()) 
-      .then(data => this.setState({articles: data.filter((item, i) => i < 9) })) 
-      .catch(error => console.log(error)); 
-  } 
+  render() {
+    const news = this.state.newsData.map((item) => (
+      <div className="news" key={item.id}>
+        <img src={item.img} alt="" />
 
-  componentDidMount() { 
-    this.getData(); 
-  } 
-
-  render() { 
-
-    return (
-      <> 
-      <div className="list">
-      {this.state.articles.map((item) => (
-        <div className="listItem">
-          <h2>{item.author}</h2>
+        <div className="article">
+          <div className="title">{item.title}</div>
+          <p className="text">{item.text}</p>
         </div>
-      ))}
-    </div>
-      </>
-    ); 
-  } 
+      </div>
+    ));
+
+    return <div className="news_panel">{news}</div>;
+  }
 }
 
 export default News;
-
-
-
-//***********
-
-// import React from "react";
-
-// function News() {
-//   const newsData = [
-//     {
-//       id: "1",
-//       title: "News",
-//       name: "Forbes",
-//       date: "2021-04-15",
-//       text:
-//         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda cupiditate iste reiciendis consequuntur? Adipisci facilis recusandae quisquam. Quibusdam ducimus perspiciatis suscipit accusamus rem, tenetur voluptate natus alias amet officia quo et dolorum, cumque eum assumenda in voluptatem soluta. Quas exercitationem natus cupiditate debitis est. Doloremque repudiandae a reprehenderit impedit velit.",
-//       img: "https://picsum.photos/201",
-//     },
-//     {
-//       id: "2",
-//       title: "News",
-//       name: "Forbes",
-//       date: "2021-04-15",
-//       text:
-//         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda cupiditate iste reiciendis consequuntur? Adipisci facilis recusandae quisquam. Quibusdam ducimus perspiciatis suscipit accusamus rem, tenetur voluptate natus alias amet officia quo et dolorum, cumque eum assumenda in voluptatem soluta. Quas exercitationem natus cupiditate debitis est. Doloremque repudiandae a reprehenderit impedit velit.",
-//       img: "https://picsum.photos/202",
-//     },
-//     {
-//       id: "3",
-//       title: "News",
-//       name: "Forbes",
-//       date: "2021-04-15",
-//       text:
-//         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda cupiditate iste reiciendis consequuntur? Adipisci facilis recusandae quisquam. Quibusdam ducimus perspiciatis suscipit accusamus rem, tenetur voluptate natus alias amet officia quo et dolorum, cumque eum assumenda in voluptatem soluta. Quas exercitationem natus cupiditate debitis est. Doloremque repudiandae a reprehenderit impedit velit.",
-//       img: "https://picsum.photos/203",
-//     },
-//     {
-//       id: "4",
-//       title: "News",
-//       name: "Forbes",
-//       date: "2021-04-15",
-//       text:
-//         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda cupiditate iste reiciendis consequuntur? Adipisci facilis recusandae quisquam. Quibusdam ducimus perspiciatis suscipit accusamus rem, tenetur voluptate natus alias amet officia quo et dolorum, cumque eum assumenda in voluptatem soluta. Quas exercitationem natus cupiditate debitis est. Doloremque repudiandae a reprehenderit impedit velit.",
-//       img: "https://picsum.photos/204",
-//     },
-//     {
-//       id: "5",
-//       title: "News",
-//       name: "Forbes",
-//       date: "2021-04-15",
-//       text:
-//         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda cupiditate iste reiciendis consequuntur? Adipisci facilis recusandae quisquam. Quibusdam ducimus perspiciatis suscipit accusamus rem, tenetur voluptate natus alias amet officia quo et dolorum, cumque eum assumenda in voluptatem soluta. Quas exercitationem natus cupiditate debitis est. Doloremque repudiandae a reprehenderit impedit velit.",
-//       img: "https://picsum.photos/205",
-//     },
-//     {
-//       id: "6",
-//       title: "News",
-//       name: "Forbes",
-//       date: "2021-04-15",
-//       text:
-//         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda cupiditate iste reiciendis consequuntur? Adipisci facilis recusandae quisquam. Quibusdam ducimus perspiciatis suscipit accusamus rem, tenetur voluptate natus alias amet officia quo et dolorum, cumque eum assumenda in voluptatem soluta. Quas exercitationem natus cupiditate debitis est. Doloremque repudiandae a reprehenderit impedit velit.",
-//       img: "https://picsum.photos/206",
-//     },
-//     {
-//       id: "7",
-//       title: "News",
-//       name: "Forbes",
-//       date: "2021-04-15",
-//       text:
-//         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda cupiditate iste reiciendis consequuntur? Adipisci facilis recusandae quisquam. Quibusdam ducimus perspiciatis suscipit accusamus rem, tenetur voluptate natus alias amet officia quo et dolorum, cumque eum assumenda in voluptatem soluta. Quas exercitationem natus cupiditate debitis est. Doloremque repudiandae a reprehenderit impedit velit.",
-//       img: "https://picsum.photos/207",
-//     },
-//     {
-//       id: "8",
-//       title: "News",
-//       name: "Forbes",
-//       date: "2021-04-15",
-//       text:
-//         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda cupiditate iste reiciendis consequuntur? Adipisci facilis recusandae quisquam. Quibusdam ducimus perspiciatis suscipit accusamus rem, tenetur voluptate natus alias amet officia quo et dolorum, cumque eum assumenda in voluptatem soluta. Quas exercitationem natus cupiditate debitis est. Doloremque repudiandae a reprehenderit impedit velit.",
-//       img: "https://picsum.photos/208",
-//     },
-//     {
-//       id: "9",
-//       title: "News",
-//       name: "Forbes",
-//       date: "2021-04-15",
-//       text:
-//         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda cupiditate iste reiciendis consequuntur? Adipisci facilis recusandae quisquam. Quibusdam ducimus perspiciatis suscipit accusamus rem, tenetur voluptate natus alias amet officia quo et dolorum, cumque eum assumenda in voluptatem soluta. Quas exercitationem natus cupiditate debitis est. Doloremque repudiandae a reprehenderit impedit velit.",
-//       img: "https://picsum.photos/209",
-//     },
-//   ];
-
-//   const news = newsData.map((item) => (
-//     <div className="new" key={item.id}>
-//       <img src={item.img} alt="thumb" />
-//       <div className="new__content">
-//         <div className="new__title__text">
-//           <p className="new__title">{item.name}</p>
-//           <p className="new__text">{item.text}</p>
-//         </div>
-//         <div className="new__name__date">
-//           <p className="new__name">{item.name}</p>
-//           <p className="new__date">{item.date}</p>
-//         </div>
-//       </div>
-//     </div>
-//   ));
-
-//   return (
-//     <>
-//       <div className="news">{news}</div>
-//     </>
-//   );
-// }
-
-// export default News;
