@@ -1,11 +1,12 @@
 ## Portfolio Tracker Interface
 
-Bachelor project.
+This project has been created with the purpose of Bachelor's Degree Final Project presentation
 
 ## Available Scripts
 
 In the project directory, you can run:
 
+### `npm install`
 ### `npm start`
 
 Runs the app in the development mode.<br />
