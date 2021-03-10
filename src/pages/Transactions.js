@@ -57,7 +57,7 @@ class Transactions extends Component {
 
           <div className="btn">
             <button>Delete transaction</button>
-            <button>Download svg</button>
+            <button>Download csv</button>
           </div>
         </div>
       </>
