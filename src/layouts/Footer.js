@@ -9,7 +9,7 @@ function Footer() {
           © 2021 Portfolio Tracker
         </p>
         
-      <Link to="/">
+      <Link to="/faq">
       FAQ
       </Link>
       </div>

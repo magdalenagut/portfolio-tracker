@@ -10,7 +10,6 @@
 
     @include md {
         padding-right: 30px;
-
     }
 
     .user {
@@ -31,65 +30,56 @@
 
         font-size: 1.5rem;
         position: absolute;
-        top: 50px;
+        top: 40px;
         right: 3vw;
-        width: 150px;
-        height: 100px;
+
+        will-change: transform;
 
         display: none;
 
         &.toggle {
-
             display: block;
-        }
 
+        }
 
         ul {
             list-style-type: none;
             height: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
+            
+            a {
+                align-items: center;
+                text-decoration: none;
+               
 
-            li {
-                border: none;
-                cursor: pointer;
-                display: flex;
-                flex-direction: row;
-                justify-content: center;
-                padding: 5%;
+                li {
+                    
 
-                color: lightgray;
+                    border: none;
+                    cursor: pointer;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    padding: 20px;;
+                    text-decoration: none;
+                    color: lightgray;
+                    @include border-radius;
 
-                a {
-
+                    will-change: scroll-position;
 
                     p {
-
                         display: inline-block;
                         text-decoration: none;
                         width: 100%;
                     }
 
+                    &:hover {
+                        color: white;
+                        @include border-radius;
 
-
+                        transition: 0.3s;
+                    }
                 }
-
-                &:hover {
-                    background: green;
-                    color: white;
-                    transition: 0.3s;
-                }
-
-
-
             }
-
-          
-
-
         }
     }
-
-
 }

@@ -9,7 +9,8 @@ import Calculator from "../pages/Calculator";
 import Watchlist from "../pages/Watchlist";
 import News from "../pages/News";
 import Settings from "../pages/Settings";
-
+import Help from "../pages/Help";
+import Faq from "../pages/Faq";
 
 
 const Page = () => {
@@ -25,6 +26,8 @@ const Page = () => {
                 <Route path="/wachlist" component={Watchlist}/>
                 <Route path="/news" component={News}/>
                 <Route path="/settings" component={Settings}/>
+                <Route path="/help" component={Help}/>
+                <Route path="/faq" component={Faq}/>
                 {/* <Route component={ErrorPage}/>  */}
             </Switch>
         </div>
