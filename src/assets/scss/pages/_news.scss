@@ -2,46 +2,74 @@
 
 .news_panel {
      display: grid;
-     grid-template-columns: 1fr 1fr 1fr;
-     grid-column-gap: 1rem;
-     grid-row-gap: 1rem;
-     font-size: 1rem;
-justify-items: center;
+     grid-template-columns: 1fr 1fr;
+     column-gap: 2rem;
+     row-gap: 2rem;
+     grid-template-rows: auto;
 
-     @include lg {
-          grid-template-columns: 1fr 1fr;
+     @include xl {
+          grid-template-columns: 1fr;
+
+     }
+
+     @include md {
+          grid-template-columns: 1fr;
      }
 
 
 
      .news {
-          display: flex;
-          flex-direction: column;
+          padding: 1rem;
+
           @include border-radius;
-          @include border-blue;
-          max-width: 300px;
-          
-     padding:1rem;
-          img {
-               @include border-radius;
-               @include border-radius;
+          @include border-light;
+
+          @include sm {
+
+               flex-direction: column;
+          }
+
+
+
+          .image {
+
                display: flex;
                flex-direction: row;
-               justify-content: center;
+               justify-content: left;
+               align-items: center;
+               opacity: 0.8;
+               float: left;
+               padding: 1rem;
+
+               img {
+
+                    @include border-radius;
+                    display: flex;
+                    width: 100%;
+               }
+
+          }
 
 
-               .article {
-                    margin: 1rem;
+          .article {
 
-                    .title {
-                         font-size: 1.5rem;
-                         padding-top: 1rem;
-                         padding-bottom: 1rem;
-                    }
+
+               padding: 1rem;
+               font-weight: 100;
+
+               .title {
+
+                    font-size: 2rem;
+                    font-weight: 400;
+                    margin-bottom: 1rem;
+                    color: $blue;
+               }
+
+               .text {
+                    font-size: 1.5rem;
 
 
                }
-
 
 
           }
