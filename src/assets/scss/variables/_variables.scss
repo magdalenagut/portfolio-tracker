@@ -4,16 +4,23 @@ $screen-md-max: 768px;
 $screen-lg-max: 992px;
 $screen-xl-max: 1200px;
 
-// Color system
-$dark-navy-blue: #01141f !default;
+// Colour system
+$dark-navy-blue: #01141F !default;
+$navy-blue: #245b8f !default;
 $dark-blue: #2f79be !default;
 $blue: #3eaef4 !default;
 $light-blue: #B7E1FB !default;
 $light: #F5FBFE !default;
+$grey: #2f3e47 !default;
 
 //Fonts
-$main: 10px;
+$main: 11px;
 $sm: 1rem;
 $md: 1.5rem;
 $lg: 2rem;
 $xl: 2.5rem;
+
+//Fonts weight
+$light-font: 100;
+$normal-font: 400;
+$bold-font: 700;

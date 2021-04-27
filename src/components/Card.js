@@ -8,11 +8,12 @@ import { IoIosFunnel } from "react-icons/io";
 
 function Card() {
   const cardData = [
-    { name: "Total Value", value: "200$", icon: <IoIosCash /> },
+    { name: "Portfolio Status", value: "", icon: "" },
+    { name: "Total Value", value: "700$", icon: <IoIosCash /> },
     { name: "Total Return", value: "200$", icon: <IoIosReturnLeft /> },
-    { name: "Net Deposits", value: "200$", icon: <IoIosBriefcase /> },
+    { name: "Net Deposits", value: "300$", icon: <IoIosBriefcase /> },
     { name: "Net Proceeds", value: "200$", icon: <IoMdBriefcase /> },
-    { name: "Transaction Fees", value: "200$", icon: <IoIosFunnel /> },
+    { name: "Transaction Fees", value: "100$", icon: <IoIosFunnel /> },
   ];
 
   const card = cardData.map((item) => (
@@ -27,9 +28,6 @@ function Card() {
 
   return (
     <>
-      <div className="card">
-        <p className="card__name">Portfolio state</p>
-      </div>
       {card}
     </>
   );

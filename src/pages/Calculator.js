@@ -99,8 +99,6 @@ class Calculator extends Component {
                 </select>
               </form>
 
-           
-
               <form className="second_select">
                 <input
                   disabled={true}

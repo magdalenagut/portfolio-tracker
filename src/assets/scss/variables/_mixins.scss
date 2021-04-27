@@ -1,25 +1,21 @@
 @import "./variables";
 
 /* Screen size */
-
 @mixin sm {
     @media (max-width: #{$screen-sm-max}) {
         @content;
     }
 }
-
 @mixin md {
     @media (max-width: #{$screen-md-max}) {
         @content;
     }
 }
-
 @mixin lg {
     @media (max-width: #{$screen-lg-max}) {
         @content;
     }
 }
-
 @mixin xl {
     @media (max-width: #{$screen-xl-max}) {
         @content;
@@ -32,23 +28,21 @@
 }
 
 @mixin border-light {
-    border: 1px solid rgba(255, 255, 255, 0.18);
+    border: 1px solid $grey;
 }
 
 @mixin border-blue {
-    border: 1px solid rgba(62, 174, 244, 0.7);
+    border: 1px solid $dark-blue;
 }
 
 /* Gradients */
 @mixin gradient-light {
-    background: linear-gradient(100deg, rgba(13, 146, 225, 1) 0%, rgba(0, 87, 150, 1) 100%);
-    backdrop-filter: blur(20.0px);
+    background: linear-gradient(149deg, $dark-blue 47%, $navy-blue 100%);
 }
 
 @mixin gradient-dark {
     background: linear-gradient(100deg, rgba(13, 146, 225, 0.1) 0%, rgba(0, 87, 150, 0.1) 100%);
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.2);
-    backdrop-filter: blur(8.0px);
     border-radius: 10px;
 }
 

@@ -1,34 +1,17 @@
 import React, { Component } from "react";
+import PortfolioData from '../data/PortfolioData';
 
 class Portfolio extends Component {
 
-    state = {walletData: [
-    {
-      id: "1",
-      name: "CRYPTO",
-      status: "5.000",
-      currency: "BTC",
-    },
-    {
-      id: "2",
-      name: "",
-      status: "0.000",
-      currency: "USD",
-    },
-    {
-      id: "3",
-      name: "",
-      status: "0.000",
-      currency: "USD",
-    },
-    {
-      id: "4",
-      valname: "",
-      status: "0.000",
-      currency: "USD",
-    },
-  ]
+    state = {walletData: []
 };
+
+
+
+componentDidMount() {
+  this.setState({walletData: PortfolioData});
+}
+
 
   handleChange = (e) => {
     const name = e.target.name;
@@ -39,11 +22,11 @@ class Portfolio extends Component {
   };
 
 
-
   handleChange = (e) => {
     e.preventDefault();
     console.log("submited");
   };
+
 
   render() {
     const wallet = this.state.walletData.map((item) => (

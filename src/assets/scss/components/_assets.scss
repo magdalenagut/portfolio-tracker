@@ -9,14 +9,16 @@
     padding: 2%;
 
     .assets_heading {
-        border-radius: 10px;
-        background: linear-gradient(100deg, rgba(13, 146, 225, 0.7) 0%, rgba(0, 87, 150, 0.7) 100%);
+     
         margin-bottom: 2%;
         min-height: 30px;
         display: flex;
         justify-content: center;
         align-items: center;
         font-size: 1.5rem;
+        width: 100%;
+        font-size: 3rem;
+        font-weight: 100;
 
     }
 
@@ -45,8 +47,10 @@
             }
         }
 
+    
         .assets_title {
             text-transform: uppercase;
+            color: $dark-blue;
 
             .assets_title_cell {
                 padding: 1%;

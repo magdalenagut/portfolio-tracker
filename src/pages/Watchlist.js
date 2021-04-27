@@ -1,101 +1,23 @@
-import React from "react";
+import React, { Component } from "react";
 import "../assets/scss/portfolio-tracker.scss";
+import WatchlistData from "../data/WatchlistData";
 
-function Watchlist() {
-  const watchlistData = [
-    {
-      id:"1",
-      name: "BTC",
-      price: "8000$",
-      hour: "1.6",
-      day: "5500$",
-      week: "13332$",
-      volume: "4165$",
-      marcetcap: "4165$",
-    },
-    {
-      id:"2",
-      name: "BTC",
-      price: "8000$",
-      hour: "1.6",
-      day: "5500$",
-      week: "13332$",
-      volume: "4165$",
-      marcetcap: "4165$",
-    },
-    {
-      id:"3",
-      name: "BTC",
-      price: "8000$",
-      hour: "1.6",
-      day: "5500$",
-      week: "13332$",
-      volume: "4165$",
-      marcetcap: "4165$",
-    },
-    {
-      id:"4",
-      name: "BTC",
-      price: "8000$",
-      hour: "1.6",
-      day: "5500$",
-      week: "13332$",
-      volume: "4165$",
-      marcetcap: "4165$",
-    },
-    {
-      id:"5",
-      name: "BTC",
-      price: "8000$",
-      hour: "1.6",
-      day: "5500$",
-      week: "13332$",
-      volume: "4165$",
-      marcetcap: "4165$",
-    },
-    {
-      id:"6",
-      name: "BTC",
-      price: "8000$",
-      hour: "1.6",
-      day: "5500$",
-      week: "13332$",
-      volume: "4165$",
-      marcetcap: "4165$",
-    },
-    {
-      id:"7",
-      name: "BTC",
-      price: "8000$",
-      hour: "1.6",
-      day: "5500$",
-      week: "13332$",
-      volume: "4165$",
-      marcetcap: "4165$",
-    },
-    {
-      id:"8",
-      name: "BTC",
-      price: "8000$",
-      hour: "1.6",
-      day: "5500$",
-      week: "13332$",
-      volume: "4165$",
-      marcetcap: "4165$",
-    },
-    {
-      id:"9",
-      name: "BTC",
-      price: "8000$",
-      hour: "1.6",
-      day: "5500$",
-      week: "13332$",
-      volume: "4165$",
-      marcetcap: "4165$",
-    },
-  ];
 
-  const watchlist = watchlistData.map((item) => (
+class Watchlist extends Component {
+  
+  constructor(props) {
+    super(props);
+    this.state = {
+      watchlistData: []
+    };
+  }
+
+componentDidMount() {
+  this.setState({watchlistData: WatchlistData});
+}
+
+render() {
+  const watchlist = this.state.watchlistData.map((item) => (
     <div className="watchlist_row" key={item.name}>
       <p className="watchlist_cell">{item.id}</p>
       <p className="watchlist_cell">{item.name}</p>
@@ -107,10 +29,8 @@ function Watchlist() {
       <p className="watchlist_cell">{item.marcetcap}</p>
     </div>
   ));
-
   return (
     <> 
-    
     <div className="watchlist_table">
       <div className="watchlist_heading">
         <p>Watchlist</p>
@@ -131,6 +51,7 @@ function Watchlist() {
     </div>
   </>
   );
+}
 }
 
 export default Watchlist;

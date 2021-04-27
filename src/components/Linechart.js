@@ -1,18 +1,13 @@
 import "../assets/scss/portfolio-tracker.scss";
 import React, { Component } from "react";
 import Chart from "react-apexcharts";
+import ChartData from "../data/ChartData";
 
 class Linechart extends Component {
   constructor(props) {
     super(props);
-
     this.state = {
-      series: [
-        {
-          name: "Portfolio value",
-          data: [31, 60, 30, 80, 60, 80, 100],
-        },
-      ],
+      series: [],
       options: {
         dataLabels: {
           enabled: false,
@@ -22,18 +17,21 @@ class Linechart extends Component {
           colors: ["#3eaef4"],
           width: "3",
         },
+
+        
         xaxis: {
           type: "date",
           categories: [
+            "2015-09-19",
+            "2016-09-19",
+            "2017-09-19",
             "2018-09-19",
-            "2018-09-19",
-            "2018-09-19",
-            "2018-09-19",
-            "2018-09-19",
-            "2018-09-19",
-            "2018-09-19",
+            "2019-09-19",
+            "2020-09-19",
+            "2021-09-19",
           ],
         },
+
         tooltip: {
           x: {
             format: "dd/MM/yy",
@@ -45,6 +43,10 @@ class Linechart extends Component {
         },
       },
     };
+  }
+
+  componentDidMount() {
+    this.setState({series: ChartData});
   }
 
   render() {

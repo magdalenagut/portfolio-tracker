@@ -8,23 +8,22 @@
 }
 
 html {
-    font-size: 10px;
+    font-size: $main;
 
     body {
         background: $dark-navy-blue;
         font-family: "Roboto", sans-serif;
-        font-weight: 400;
+        font-weight: $normal-font;
         color: $light;
 
         div.app {
-            margin: 0 auto;
-            max-width: 1920px;
+
             min-height: 100vh;
             height: 100%;
             width: 100%;
             display: grid;
             grid-template-columns: 300px 1fr;
-            grid-template-rows: auto;
+            // grid-template-rows: auto;
            
            
             @include lg {
@@ -36,11 +35,16 @@ html {
                 width: 100%;
                 min-height: 100vh;
                 min-width: 300px;
+                
                 @include lg {
                     display: none;
                 }
 
             }
+
+            @media (max-width: $screen-sm-max) {
+
+              }
 
             main {
                 display: flex;
